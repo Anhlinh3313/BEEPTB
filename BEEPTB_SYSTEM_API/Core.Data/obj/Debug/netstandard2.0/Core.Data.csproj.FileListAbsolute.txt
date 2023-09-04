@@ -1,0 +1,14 @@
+D:\angular\BEEPTB\BEEPTB_SYSTEM_API\Core.Data\bin\Debug\netstandard2.0\Core.Data.deps.json
+D:\angular\BEEPTB\BEEPTB_SYSTEM_API\Core.Data\bin\Debug\netstandard2.0\Core.Data.dll
+D:\angular\BEEPTB\BEEPTB_SYSTEM_API\Core.Data\bin\Debug\netstandard2.0\Core.Data.pdb
+D:\angular\BEEPTB\BEEPTB_SYSTEM_API\Core.Data\bin\Debug\netstandard2.0\Core.Entity.dll
+D:\angular\BEEPTB\BEEPTB_SYSTEM_API\Core.Data\bin\Debug\netstandard2.0\Core.Infrastructure.dll
+D:\angular\BEEPTB\BEEPTB_SYSTEM_API\Core.Data\bin\Debug\netstandard2.0\Core.Entity.pdb
+D:\angular\BEEPTB\BEEPTB_SYSTEM_API\Core.Data\bin\Debug\netstandard2.0\Core.Infrastructure.pdb
+D:\angular\BEEPTB\BEEPTB_SYSTEM_API\Core.Data\obj\Debug\netstandard2.0\Core.Data.csprojAssemblyReference.cache
+D:\angular\BEEPTB\BEEPTB_SYSTEM_API\Core.Data\obj\Debug\netstandard2.0\Core.Data.AssemblyInfoInputs.cache
+D:\angular\BEEPTB\BEEPTB_SYSTEM_API\Core.Data\obj\Debug\netstandard2.0\Core.Data.AssemblyInfo.cs
+D:\angular\BEEPTB\BEEPTB_SYSTEM_API\Core.Data\obj\Debug\netstandard2.0\Core.Data.csproj.CoreCompileInputs.cache
+D:\angular\BEEPTB\BEEPTB_SYSTEM_API\Core.Data\obj\Debug\netstandard2.0\Core.Data.csproj.CopyComplete
+D:\angular\BEEPTB\BEEPTB_SYSTEM_API\Core.Data\obj\Debug\netstandard2.0\Core.Data.dll
+D:\angular\BEEPTB\BEEPTB_SYSTEM_API\Core.Data\obj\Debug\netstandard2.0\Core.Data.pdb
