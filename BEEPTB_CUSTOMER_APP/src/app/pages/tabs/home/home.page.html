@@ -1,0 +1,44 @@
+<!-- home-page -->
+<ion-toolbar style="--background: white;">
+  <ion-menu-button slot="start" [autoHide]="false" color="light">
+    <img src="../../../../assets/icon/hamburger.svg" >
+  </ion-menu-button>
+</ion-toolbar>
+<ion-content>
+    <ion-row class="home-page" >
+      <ion-row class="home-page-test">
+        <ion-col>
+          <p class="test-hi">{{messageHomPage}}, {{user.name}}</p>
+          <p class="test-message">{{'home.message' | translate}}</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="home-img">
+        <img src="../../../assets/images/img_home_update.svg" />
+      </ion-row>
+
+      <ion-row class="signup-btn">
+        <ion-button fill="clear" class="btn-login" (click)="loadBooking()">
+            <p>{{'home.booking' | translate}}</p>
+        </ion-button>
+      </ion-row>
+
+      <ion-row class="home-text-info">
+        <p class="home-text-info-booking">{{'home.activity' | translate}}</p>
+      </ion-row>
+  
+      <ion-row class="home-history" (click)="onClickBookingDetail()">
+        <ion-row class="history-border">
+          <ion-col class="history-date-total">
+            <p class="history-date">{{dateCreateBooking}}</p>
+            <p class="history-time">{{hourCreateBooking}}</p>
+            <p class="history-text">{{bookingStatusName}}</p>
+          </ion-col>
+          <ion-col class="history-img">
+            <img style="float: right;" src="../../../assets/images/img_home_booking.svg" />
+          </ion-col>
+        </ion-row>
+      </ion-row>
+    </ion-row>
+</ion-content>
+<!-- end home-page -->

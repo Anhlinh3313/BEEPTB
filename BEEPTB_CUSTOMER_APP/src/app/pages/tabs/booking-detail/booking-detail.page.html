@@ -1,0 +1,296 @@
+<ion-backdrop *ngIf="evaluate"></ion-backdrop>
+<!-- Bookings Cancel and contact -->
+<ion-content class="otp-container" *ngIf="bookingCancelAndContact">
+  <ion-row class="otp-header">
+      <ion-toolbar class="update-toolbar">
+        <ion-icon name="arrow-back" slot="start" (click)="closeUpdateInfo()"></ion-icon>
+        <p class="text-booking">{{'booking.booking' | translate}}</p>
+      </ion-toolbar>
+  </ion-row>
+  <ion-row>
+    <ion-col class="booking-code">
+      {{'booking.bookingCode' | translate}}: {{bookingDetail.code}}
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.packagetype' | translate}}</label>
+      </ion-col>
+      <ion-item class="booking-input" detail>
+        <ion-img src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-select [disabled]="true" class="booking-select" value="{{bookingDetail.serviceId}}" [interfaceOptions]="customAlertOptions" cancelText="Đóng" okText="Chọn">
+          <ion-select-option value="10">Theo ngày</ion-select-option>
+          <ion-select-option value="12">Theo tháng</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.startingTime' | translate}}</label>
+      </ion-col>
+      <ion-item class="booking-input">
+        <ion-img src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-datetime [disabled]="true" [(ngModel)]="startDate"  class="booking-datetime" displayFormat="DD/MM/YYYY HH:mm" placeholder="{{'booking.today' | translate}}"></ion-datetime>
+      </ion-item>
+    </ion-col>
+     
+    <ion-col *ngIf="checkBookingMonth">
+      <ion-col>
+        <label class="booking-label">{{'booking.numberOfMonths' | translate}}</label>
+      </ion-col>
+      <ion-item class="booking-input">
+        <ion-img src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-datetime [disabled]="true" [(ngModel)]="startMonths" class="booking-datetime" displayFormat="MM" placeholder="{{'booking.today' | translate}}"></ion-datetime>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.Endtime' | translate}}</label>
+      </ion-col>
+
+      <ion-item class="booking-input">
+        <ion-img src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-datetime [(ngModel)]="endDate" disabled class="booking-datetime" displayFormat="DD/MM/YYYY HH:mm" placeholder="{{'booking.Endtime' | translate}}"></ion-datetime>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.selectVehicleType' | translate}}</label>
+      </ion-col>
+
+      <ion-item class="booking-input">
+        <ion-img style="padding-right: 8px;" src="../../../assets/icon/vehicle.svg" class="pr-10"></ion-img>
+        <ion-input style="text-overflow: ellipsis;" disabled class="booking-datetime">{{bookingDetail.vehicleTypeName}}</ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.VehicleDeliveryAddress' | translate}}</label>
+      </ion-col>
+
+      <ion-item class="booking-input">
+        <ion-img style="padding-right: 8px;" src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-input style="text-overflow: ellipsis;" disabled class="booking-datetime">{{bookingDetail.address}}</ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-row>
+          <ion-col>
+            <label class="booking-label">{{'booking.Intomoney' | translate}}</label>
+          </ion-col>
+
+          <ion-col>
+            <label class="booking-total-money">{{bookingDetail.price}}</label>
+          </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col style="text-align: center;">
+      <label class="booking-detail-message">{{bookingDetail.bookingStatusName}}</label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="boking-detail-btn">
+    <ion-button fill="clear" class="btn-bottom" (click)="bookingsSuccess()">
+        <p class="test-bottom">{{'booking.button1' | translate}}</p>
+      </ion-button>
+  </ion-row>
+
+  <ion-row class="boking-detail-call-btn">
+    <ion-button fill="clear" class="btn-call" (click)="checkBookingsCancel()">
+        <p class="test-bottom">{{'booking.button2' | translate}}</p>
+      </ion-button>
+  </ion-row>
+</ion-content>
+<!--End Bookings Cancel and contact -->
+
+<!-- Bookings reset -->
+<ion-content class="otp-container" *ngIf="bookingReset">
+  <ion-row class="otp-header">
+      <ion-toolbar class="update-toolbar">
+        <ion-icon name="arrow-back" slot="start" (click)="closeUpdateInfo()"></ion-icon>
+        <p class="text-booking">{{'booking.booking' | translate}}</p>
+      </ion-toolbar>
+  </ion-row>
+  <ion-row>
+    <ion-col class="booking-code">
+      {{'booking.bookingCode' | translate}}: {{bookingDetail.code}}
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.packagetype' | translate}}</label>
+      </ion-col>
+      <ion-item class="booking-input" detail>
+        <ion-img src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-select [disabled]="true" class="booking-select" value="{{bookingDetail.serviceId}}" [interfaceOptions]="customAlertOptions" cancelText="Đóng" okText="Chọn">
+          <ion-select-option value="10">Theo ngày</ion-select-option>
+          <ion-select-option value="12">Theo tháng</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.startingTime' | translate}}</label>
+      </ion-col>
+      <ion-item class="booking-input">
+        <ion-img src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-datetime [disabled]="true" [(ngModel)]="startDate"  class="booking-datetime" displayFormat="DD/MM/YYYY HH:mm" placeholder="{{'booking.today' | translate}}"></ion-datetime>
+      </ion-item>
+    </ion-col>
+     
+    <ion-col *ngIf="checkBookingMonth">
+      <ion-col>
+        <label class="booking-label">{{'booking.numberOfMonths' | translate}}</label>
+      </ion-col>
+      <ion-item class="booking-input">
+        <ion-img src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-datetime [disabled]="true" [(ngModel)]="startMonths" class="booking-datetime" displayFormat="MM" placeholder="{{'booking.today' | translate}}"></ion-datetime>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.Endtime' | translate}}</label>
+      </ion-col>
+
+      <ion-item class="booking-input">
+        <ion-img src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-datetime [(ngModel)]="endDate" disabled class="booking-datetime" displayFormat="DD/MM/YYYY HH:mm" placeholder="{{'booking.Endtime' | translate}}"></ion-datetime>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.selectVehicleType' | translate}}</label>
+      </ion-col>
+
+      <ion-item class="booking-input">
+        <ion-img style="padding-right: 8px;" src="../../../assets/icon/vehicle.svg" class="pr-10"></ion-img>
+        <ion-input style="text-overflow: ellipsis;" disabled class="booking-datetime">{{bookingDetail.vehicleTypeName}}</ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.VehicleDeliveryAddress' | translate}}</label>
+      </ion-col>
+
+      <ion-item class="booking-input">
+        <ion-img style="padding-right: 8px;" src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-input style="text-overflow: ellipsis;" disabled class="booking-datetime">{{bookingDetail.address}}</ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-row>
+          <ion-col>
+            <label class="booking-label">{{'booking.Intomoney' | translate}}</label>
+          </ion-col>
+
+          <ion-col>
+            <label class="booking-total-money">{{bookingDetail.price}}</label>
+          </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col style="text-align: center;">
+      <label class="booking-detail-message-cancel">{{statusCancel}}</label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="boking-detail-btn">
+    <ion-button fill="clear" class="btn-bottom-reset" (click)="loadBookingReset()">
+        <p class="test-bottom-reset">{{'booking.reset' | translate}}</p>
+      </ion-button>
+  </ion-row>
+</ion-content>
+<!--End Bookings reset -->
+
+<!-- evaluate -->
+<ion-card class="content-evaluate" *ngIf="evaluate">
+  <ion-row>
+    <ion-col class="img-evaluate">
+      <img class="icon-evaluate" src="../../../assets/icon/icon_evaluate.svg">
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <h1 class="evaluate">{{'booking.evaluate' | translate}}</h1>
+      <p class="text-evaluate">{{'booking.textform' | translate}}</p>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col class="star">
+      <ionic5-star-rating #rating 
+          activeIcon = "star"
+          defaultIcon = "star-outline"
+          activeColor = "#FFCE63" 
+          defaultColor = "#FFCE63"
+          readonly="false"
+          rating="5"
+          fontSize = "32px">
+      </ionic5-star-rating>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.detail' | translate}}</label>
+      </ion-col>
+      <ion-item class="booking-input">
+        <ion-input style="text-overflow: ellipsis;" class="booking-datetime" placeholder="{{'booking.importContent' | translate}}"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="boking-detail-btn">
+    <ion-button fill="clear" class="btn-bottom-reset" (click)="sendEvaluate()">
+        <p class="test-bottom-reset">{{'booking.sendReview' | translate}}</p>
+      </ion-button>
+  </ion-row>
+
+  <ion-row class="boking-detail-btn">
+    <ion-button fill="clear" class="btn-bottom" (click)="checkCancel()">
+        <p class="test-bottom">{{'booking.cancel' | translate}}</p>
+      </ion-button>
+  </ion-row>
+</ion-card>
+<!-- end evaluate -->
+
+

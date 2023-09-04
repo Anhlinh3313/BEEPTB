@@ -1,0 +1,50 @@
+<ion-menu class="menu" side="start" menuId="first">
+  <ion-content>
+    <ion-row>
+      <ion-col class="avatar-info" *ngFor="let itemAvatar of avatarImages; index as i">
+        <ion-row class="avatar-image"> 
+          <ion-col>
+            <img class="avatar" *ngIf="avatarImages[0].base64" [src]="avatarImages[0].base64"/>
+            <img class="camera" src="../../../assets/images/camera.svg" (click)="checkImgAvatar(0, avatarImages)"/>
+          </ion-col>
+        </ion-row>
+        <ion-row class="avatar-name">
+          <p>{{user.name}}</p>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-menu-toggle [autoHide]="false">
+        <ion-item detail (click)="goToCustomerDetail()" lines="full">
+          <img slot="start" src="../../../assets/icon/personal.svg">
+          <ion-label>
+            {{'listMenu.personalInformation' | translate}}
+          </ion-label>
+        </ion-item>
+        <ion-item detail lines="full">
+          <img slot="start" src="../../../assets/icon/rider.svg">
+          <ion-label (click)="bookingHistory()">
+            {{'listMenu.tripHistory' | translate}}
+          </ion-label>
+        </ion-item>
+        <ion-item detail (click)="goToCustomerSetting()" lines="full">
+          <img slot="start" src="../../../assets/icon/setting.svg">
+          <ion-label>
+            {{'listMenu.setting' | translate}}
+          </ion-label>
+        </ion-item>
+        <ion-item (click)="logout()" detail lines="full">
+          <img slot="start" src="../../../assets/icon/logout.svg">
+          <ion-label>
+            {{'listMenu.logOut' | translate}}
+          </ion-label>
+        </ion-item>
+    </ion-menu-toggle>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet main></ion-router-outlet>
+
+
+
+

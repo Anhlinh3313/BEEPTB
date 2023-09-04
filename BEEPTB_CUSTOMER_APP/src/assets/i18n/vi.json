@@ -1,0 +1,134 @@
+{  
+    "login":{
+        "signin": "ĐĂNG NHẬP",
+        "signup": "ĐĂNG KÝ",
+        "version": "Phiên bản"
+    },
+    "signup":{
+        "title": "ĐĂNG KÝ",
+        "phone": "Số điện thoại",
+        "password": "Mật khẩu",
+        "email": "Email",
+        "birthday": "Ngày sinh",
+        "name": "Họ tên",
+        "gender": "Giới tính",
+        "male": "Nam",
+        "female": "Nữ",
+        "idcard": "Tải ảnh CCCD/CMND",
+        "textFooter1": "Bạn đã có tài khoản?",
+        "textFooter2": "Đăng nhập ngay!"
+    },
+    "otp": {
+        "title": "XÁC NHẬN OTP",
+        "buttonContinue": "Tiếp tục",
+        "resend": "Gửi lại mã",
+        "textFooter1": "Mã OTP vừa được gửi đến điện thoại của bạn",
+        "textFooter2": "Vui lòng đợi trong"
+    },
+    "signin":{
+        "login": "ĐĂNG NHẬP",
+        "phone": "Số điện thoại",
+        "passWord": "Mật khẩu",
+        "forgotPassword": "Quên mật khẩu?",
+        "forgotPassword1": "QUÊN MẬT KHẨU",
+        "textFooter1": "Bạn chưa có tài khoản?",
+        "textFooter2": "Đăng kí ngay!",
+        "confirm": "XÁC NHẬN",
+        "textFooter3": "Chúng tôi sẽ gửi mã OTP về số điện thoại bạn đã đăng ký"
+    },
+    "home":{
+        "hi": "Chào buổi sáng, ",
+        "message": "Bạn chưa có chuyến đi nào. Hãy đặt ngay nhé!",
+        "booking": "ĐẶT XE",
+         "rides": "Số chuyến",
+        "hours": "Số giờ",
+        "KMS": "Số KMS",
+        "activity": "Hoạt động",
+        "textFooter1": "Bạn chưa có chuyến đi nào sắp tới",
+        "textFooter2": "Xác nhận thành công"
+
+    },
+    "booking":{
+        "booking": "ĐẶT XE",
+        "bookingCode": "Mã đặt xe",
+        "packagetype": "Dịch vụ",
+        "byDate": "Theo ngày",
+        "startingTime": "Thời Gian Bắt Đầu",
+        "today": "Ngày hiện tại",
+        "Endtime": "Thời Gian Kết Thúc",
+        "selectVehicleType": "Chọn Loại Xe",
+        "motorcycleNumber": "XE SỐ",
+        "acceleratorMotorcycle": "XE GA",
+        "clutchMotorcycle": "XE CÔN",
+        "MinimumPrice": "Giá tối thiểu",
+        "next": "TIẾP THEO",
+        "numberOfMonths": "Số Tháng",
+        "enterAnAddress": "Nhập địa chỉ",
+        "VehicleDeliveryAddress": "Địa Chỉ Giao Xe",
+        "Intomoney": "Thành Tiền",
+        "Completed": "HOÀN TẤT",
+        "successfullyBooking": "ĐẶT XE THÀNH CÔNG!",
+        "text1": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+        "viewOrderDetails": "XEM CHI TIẾT ĐƠN HÀNG",
+        "onTheHomepage": "VỀ TRANG CHỦ",
+        "button1": "LIÊN HỆ TỔNG ĐÀI",
+        "button2": "HUỶ ĐƠN HÀNG",
+        "reset": "ĐẶT LẠI",
+        "evaluate": "ĐÁNH GIÁ",
+        "textform":"Bạn cảm thấy như thế nào về dịch vụ này, hãy cho chúng tôi biết để phục vụ bạn tốt hơn",
+        "detail": "Chi tiết",
+        "sendReview": "GỬI ĐÁNH GIÁ",
+        "cancel": "BỎ QUA",
+        "importContent": "Nhập nội dung"
+    },
+    "bookingHistory":{
+        "bookingHistory": "LỊCH SỬ BOOKING",
+        "statusShipment": "Trạng thái đơn hàng",
+        "pay": "Thanh toán",
+        "month": "THÁNG",
+        "textFooter1": "Bạn chưa có booking nào. Hãy đặt xe ngay để trải nghiệm nhé",
+        "booking": "ĐẶT XE",
+        "successfulConfirmation": "Xác nhận thành công",
+        "waitingForConfirmation": "Đang chờ xác nhận",
+        "denied": "Bị từ chối",
+        "carReceived": "Đã nhận xe"
+    },
+    "resetPassword":{
+        "textFooter1": "Vui lòng nhập mật khẩu mới",
+        "textFooter2": "Xác nhận mật khẩu",
+        "resetPassWord": "ĐẶT LẠI MẬT KHẨU"
+    },
+    "listMenu":{
+        "personalInformation": "Thông tin cá nhân",
+        "tripHistory": "Lịch sử chuyến đi",
+        "setting": "Cài đặt",
+        "logOut": "Đăng xuất"
+    },
+    "changePassword": {
+        "changePassword": "ĐỔI MẬT KHẨU",
+        "completed": "HOÀN TẤT",
+        "currentPassword": "Nhập mật khẩu cũ",
+        "newPassword": "Nhập mật khẩu mới",
+        "ConfirmNewPassword": "Xác nhận mật khẩu mới"
+    },
+    "setting": {
+        "setting": "CÀI ĐẶT",
+        "password": "Mật khẩu",
+        "changePassword": "Đổi mật khẩu",
+        "language": "Ngôn ngữ",
+        "customerCareCenter": "Tổng đài CSKH"
+    },
+    "customerDetail":{
+        "title": "THÔNG TIN",
+        "save": "Lưu",
+        "phoneNumber": "Số điện thoại",
+        "name":"Họ tên",
+        "birtDate": "Ngày sinh",
+        "email": "Email",
+        "gender":"Giới tính",
+        "male": "Nam",
+        "female":"Nữ",
+        "Identity": "Căn Cước Công Dân",
+        "driverCard": "Bằng Lái Xe"
+    }
+}

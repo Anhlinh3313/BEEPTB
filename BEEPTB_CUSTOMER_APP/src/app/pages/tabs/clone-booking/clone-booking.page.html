@@ -1,0 +1,93 @@
+<!-- booking theo ngày -->
+<ion-content class="otp-container">
+  <ion-row class="otp-header">
+      <ion-toolbar class="update-toolbar">
+        <ion-icon name="arrow-back" slot="start" (click)="closeUpdateInfo()"></ion-icon>
+        <p style="text-align: center;">{{'booking.booking' | translate}}</p>
+      </ion-toolbar>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.packagetype' | translate}}</label>
+      </ion-col>
+      <ion-item class="booking-input" detail>
+        <ion-img src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-select class="booking-select" value="{{serviceId}}" (ionChange)="changeService($event)" [interfaceOptions]="customAlertOptions" cancelText="Đóng" okText="Chọn">
+          <ion-select-option value="10">Theo ngày</ion-select-option>
+          <ion-select-option value="12">Theo tháng</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col [style]="checkCSSDate">
+      <ion-col>
+        <label class="booking-label">{{'booking.startingTime' | translate}}</label>
+      </ion-col>
+      <ion-item class="booking-input">
+        <ion-img src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-datetime (ionChange)="changeStartDate()" [(ngModel)]="startDate"  class="booking-datetime" displayFormat="DD/MM/YYYY HH:mm" placeholder="{{'booking.today' | translate}}"></ion-datetime>
+      </ion-item>
+    </ion-col>
+     
+    <ion-col *ngIf="checkBookingMonth">
+      <ion-col>
+        <label class="booking-label">{{'booking.numberOfMonths' | translate}}</label>
+      </ion-col>
+      <ion-item class="booking-input">
+        <ion-img src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-datetime (ionChange)="getDateByMonth()" [(ngModel)]="startMonths" class="booking-datetime" displayFormat="M" placeholder="{{'booking.today' | translate}}"></ion-datetime>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.Endtime' | translate}}</label>
+      </ion-col>
+      <ion-item class="booking-input">
+        <ion-img src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-datetime (onChange)="getDateByEndDate()" [(ngModel)]="endDate" [disabled]="checkBookingMonth" class="booking-datetime" displayFormat="DD/MM/YYYY HH:mm" placeholder="{{'booking.Endtime' | translate}}"></ion-datetime>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="booking-text-info">
+    <p class="text-info-booking">{{'booking.selectVehicleType' | translate}}</p>
+  </ion-row>
+
+  <ion-row class="check-motorcycle">
+      <ion-col class="check-motorcycle-col" (click)="motorcycleNumber()" [style]="borderMotorcycleNumber" [hidden]="motorcycleNumberkHidden">
+        <p class="name-number">{{'booking.motorcycleNumber' | translate}}</p>
+        <img class="booking-img" src="../../../assets/icon/number_motorcycle.svg" />
+        <p class="number-booking">{{priceMotorcycleNumber}}</p>
+        <p class="number-money">{{'booking.MinimumPrice' | translate}}</p>
+      </ion-col>
+
+      <ion-col class="check-motorcycle-col" (click)="acceleratorMotorcycle()" [style]="borderAcceleratorMotorcycle" [hidden]="acceleratorMotorcycleHidden">
+        <p class="name-number">{{'booking.acceleratorMotorcycle' | translate}}</p>
+        <img class="booking-img" src="../../../assets/icon/accelerator_motorcycle.svg" />
+        <p class="number-booking">{{priceAcceleratorMotorcycle}}</p>
+        <p class="number-money">{{'booking.MinimumPrice' | translate}}</p>
+      </ion-col>
+
+      <ion-col class="check-motorcycle-col" (click)="clutchMotorcycle()" [style]="borderClutchMotorcycle" [hidden]="clutchMotorcycleHidden">
+        <p class="name-number">{{'booking.clutchMotorcycle' | translate}}</p>
+        <img class="booking-img" src="../../../assets/icon/clutch_motorcycle.svg" />
+        <p class="number-booking">{{priceClutchMotorcycle}}</p>
+        <p class="number-money">{{'booking.MinimumPrice' | translate}}</p>
+      </ion-col>
+  </ion-row>
+
+  <ion-row class="signup-btn" style="padding-top: 16px;">
+    <ion-button style="background: #34A4B6;" fill="clear" class="btn-login" (click)="calculateBookingMap()">
+        <p>{{'booking.next' | translate}}</p>
+      </ion-button>
+  </ion-row>
+
+</ion-content>
+<!-- end booking theo ngày -->

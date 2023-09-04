@@ -1,0 +1,66 @@
+.booking-status {
+    padding-left: 8px;
+    width: 100%;
+}
+.lits-datetime{
+    padding: 5px 20px;
+    .booking-date{
+        font-family: SF Pro Text;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: -0.24px;
+        color: #1A1A1A;
+    
+    }
+}
+
+.booking-list-date{
+    margin: 0px;
+    padding: 10px 0px;
+}
+
+.booking-history-address{
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.08px;
+    color: #1A1A1A;
+    margin: 0px;
+}
+.booking-history-messge{
+    font-family: SF Pro Text;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: right;
+    letter-spacing: -0.24px;
+    color: #1673FE;
+    margin: 0px;
+    position: absolute;
+    right: 0px;
+    bottom: -3px;
+}
+.label-list-history{
+    background: #FFFFFF;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+.booking-history-onfirmation{
+    font-family: SF Pro Text;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: right;
+    letter-spacing: -0.24px;
+    color: #34A4B6;
+    margin: 0px;
+    position: absolute;
+    right: 0px;
+    bottom: -3px;
+}

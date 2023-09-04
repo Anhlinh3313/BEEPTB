@@ -1,0 +1,130 @@
+{  
+    "login":{
+        "signin": "Sign In",
+        "signup": "Sign Up",
+        "version": "Version"
+    },
+    "signup":{
+        "title": "Register",
+        "phone": "Phone Number",
+        "password": "Password",
+        "email": "Email",
+        "birthday": "Date of birth",
+        "name": "Full name",
+        "gender": "Gender",
+        "male": "Male",
+        "female": "Female",
+        "idcard": "Upload Id Card Picture",
+        "textFooter1": "You have account already?",
+        "textFooter2": "Login now!"
+    },
+    "otp": {
+        "title": "Confirm OTP",
+        "buttonContinue": "Continue",
+        "resend": "Resend OTP",
+        "textFooter1": "The OTP has just been sent to your phone",
+        "textFooter2": "Please wait in"
+    },
+    "signin":{
+        "login": "SIGN IN",
+        "phone": "Phone number",
+        "passWord": "Password",
+        "forgotPassword": "Forgot password?",
+        "forgotPassword1": "Forgot password",
+        "textFooter1": "Do not have an account?",
+        "textFooter2": "Login now",
+        "textFooter3": "We will send OTP to your registered phone number",
+        "confirm": "CONFIRM"
+    },
+    "home":{
+        "hi": "good morning, ",
+        "message": "You have not to go any. Please set now!",
+        "booking": "BOOKING",
+        "successfulConfirmation": "Successful confirmation",
+        "textFooter2": "Successful confirmation",
+        "activity": "Activity"
+    },
+    "booking":{
+        "booking": "Booking",
+        "bookingCode": "Vehicle booking code",
+        "packagetype": "Package Type",
+        "byDate": "By Date",
+        "startingTime": "Starting Time",
+        "today": "Today",
+        "Endtime": "END TIME",
+        "selectVehicleType": "select Vehicle Type",
+        "motorcycleNumber": "motorcycle Number",
+        "acceleratorMotorcycle": "accelerator Motorcycle",
+        "clutchMotorcycle": "clutch Motorcycle",
+        "MinimumPrice": "Minimum Price",
+        "next": "NEXT",
+        "numberOfMonths": "number Of Months",
+        "enterAnAddress": "enter An Address",
+        "VehicleDeliveryAddress": "Vehicle Delivery Address",
+        "Intomoney": "Into money",
+        "Completed": "COMPLETED",
+        "successfullyBooking": "BOOKING SUCCESSFULLY!",
+        "text1": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+        "viewOrderDetails": "VIEW ORDER DETAILS",
+        "onTheHomepage": "ON THE HOMEPAGE",
+        "button1": "CONTACT TAIWAN",
+        "button2": "Cancel ORDER ",
+        "reset": "RESET",
+        "evaluate": "EVALUATE",
+        "textform":"How do you feel about this service, let us know to better serve you",
+        "detail": "Detail",
+        "sendReview": "SEND REVIEW",
+        "cancel": "FORGET",
+        "importContent": "Import content"
+    },
+    "bookingHistory":{
+        "bookingHistory": "BOOKING HISTORY",
+        "statusShipment": "Status Shipment",
+        "pay": "Pay",
+        "month": "MONTH",
+        "textFooter1": "You have no booking yet. Please book a car now to experience",
+        "booking": "BOOKING",
+        "successfulConfirmation": "Success Ful Confirmation",
+        "waitingForConfirmation": "Waiting For Confirmation",
+        "denied": "Denied",
+        "carReceived": "Car Received"
+    },
+    "resetPassword":{
+        "textFooter1": "Please enter a new password",
+        "textFooter2": "Confirm password",
+        "resetPassWord": "RESET PASSWORD"
+    },
+    "listMenu":{
+        "personalInformation": "Personal Information",
+        "tripHistory": "Trip History",
+        "setting": "Setting",
+        "logOut": "Log Out"
+    },
+    "changePassword": {
+        "changePassword": "Change Password",
+        "completed": "COMPLETED",
+        "currentPassword": "Current Password",
+        "newPassword": "New Password",
+        "ConfirmNewPassword": "Confirm New Password "
+    },
+    "setting": {
+        "setting": "Setting",
+        "password": "Password",
+        "changePassword": "Change Password",
+        "language": "Language",
+        "customerCareCenter": "Customer Care Center"
+    },
+    "customerDetail":{
+        "title": "Infomation",
+        "save": "Save",
+        "phoneNumber": "Phone Number",
+        "name":"Full Name",
+        "birtDate": "Date of birth",
+        "email": "Email",
+        "gender":"Gender",
+        "male": "Male",
+        "female":"Female",
+        "Identity": "Identity Card",
+        "driverCard": "Driver Card"
+    }
+}

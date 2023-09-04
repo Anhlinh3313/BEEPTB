@@ -1,0 +1,105 @@
+<ion-content class="otp-container">
+  <ion-row class="otp-header">
+      <ion-toolbar class="update-toolbar">
+        <ion-icon name="arrow-back" slot="start" (click)="closeUpdateInfo()"></ion-icon>
+        <p class="text-booking">{{'booking.booking' | translate}}</p>
+      </ion-toolbar>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.packagetype' | translate}}</label>
+      </ion-col>
+      <ion-item class="booking-input" detail>
+        <ion-img src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-select [disabled]="true" class="booking-select" value="{{serviceId}}" [interfaceOptions]="customAlertOptions" cancelText="Đóng" okText="Chọn">
+          <ion-select-option value="10">Theo ngày</ion-select-option>
+          <ion-select-option value="12">Theo tháng</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.startingTime' | translate}}</label>
+      </ion-col>
+      <ion-item class="booking-input">
+        <ion-img src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-datetime [disabled]="true" [(ngModel)]="startDate"  class="booking-datetime" displayFormat="DD/MM/YYYY HH:mm" placeholder="{{'booking.today' | translate}}"></ion-datetime>
+      </ion-item>
+    </ion-col>
+     
+    <ion-col *ngIf="checkBookingMonth">
+      <ion-col>
+        <label class="booking-label">{{'booking.numberOfMonths' | translate}}</label>
+      </ion-col>
+      <ion-item class="booking-input">
+        <ion-img src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-datetime [disabled]="true" [(ngModel)]="startMonths" class="booking-datetime" displayFormat="MM" placeholder="{{'booking.today' | translate}}"></ion-datetime>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.Endtime' | translate}}</label>
+      </ion-col>
+
+      <ion-item class="booking-input">
+        <ion-img src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-datetime [(ngModel)]="endDate" disabled class="booking-datetime" displayFormat="DD/MM/YYYY HH:mm" placeholder="{{'booking.Endtime' | translate}}"></ion-datetime>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.selectVehicleType' | translate}}</label>
+      </ion-col>
+
+      <ion-item class="booking-input">
+        <ion-img style="padding-right: 8px;" src="../../../assets/icon/vehicle.svg" class="pr-10"></ion-img>
+        <ion-input style="text-overflow: ellipsis;" disabled class="booking-datetime">{{vehicleName}}</ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <label class="booking-label">{{'booking.VehicleDeliveryAddress' | translate}}</label>
+      </ion-col>
+
+      <ion-item class="booking-input">
+        <ion-img style="padding-right: 8px;" src="../../../assets/icon/icon_booking_date.svg" class="pr-10"></ion-img>
+        <ion-input style="text-overflow: ellipsis;" disabled class="booking-datetime">{{address}}</ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-row>
+          <ion-col>
+            <label class="booking-label">{{'booking.Intomoney' | translate}}</label>
+          </ion-col>
+
+          <ion-col>
+            <label class="booking-total-money">{{priceTable}}</label>
+          </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="signup-btn" style="padding-top: 16px;">
+    <ion-button fill="clear" class="btn-login" (click)="bookingsSuccess()">
+        <p>{{'booking.Completed' | translate}}</p>
+      </ion-button>
+  </ion-row>
+
+</ion-content>

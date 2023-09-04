@@ -1,0 +1,92 @@
+<ion-header class="cus-detail-header" >
+  <ion-toolbar>
+    <ion-icon class="cus-info-back" name="arrow-back" slot="start" (click)="back()"></ion-icon>
+    <ion-title style="text-align: center;">{{'bookingHistory.bookingHistory' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- history-data -->
+<ion-content class="otp-container" *ngIf="historyData">
+  <ion-row>
+    <ion-col>
+      <label class="booking-label">{{'bookingHistory.statusShipment' | translate}}</label>
+      <ion-item class="booking-input">
+        <ion-img style="padding-right: 8px;" src="../../../assets/icon/status-shipment.svg" class="pr-10"></ion-img>
+        <ion-select [(ngModel)]="bookingStatusId" mode="md" placeholder="Chọn trạng thái" (ionChange)="changeBookingStatus()">
+          <ion-select-option *ngFor="let item of bookingStatus" [value]="item.id">{{item.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+
+    <ion-col>
+      <label class="booking-label">{{'bookingHistory.pay' | translate}}</label>
+      <ion-item class="booking-input">
+        <ion-img style="padding-right: 8px;" src="../../../assets/icon/booking-payment.svg" class="pr-10"></ion-img>
+        <ion-select mode="md" placeholder="Tất cả" (ionChange)="changeBookinPay()">
+          <ion-select-option [value]="1">Đã thanh toán</ion-select-option>
+          <ion-select-option [value]="0">Chưa thanh toán</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="lits-datetime">
+    <ion-col>
+      <label class="booking-date">{{'bookingHistory.month' | translate}} 3/2021</label>
+    </ion-col>
+  </ion-row>
+  
+  <ion-row class="lits-datetime"  *ngFor="let itembooking of booking">
+    <ion-col class="label-list-history">
+      <ion-row>
+        <ion-col>
+          <ion-row>
+            <ion-col size="2">
+              <img [src]="itembooking.iconType"/> 
+            </ion-col>
+            <ion-col size="10">
+              <p class="booking-list-date">{{itembooking.startDate | date:'dd/MM/yyyy HH:mm'}} - {{itembooking.endDate | date:'dd/MM/yyyy HH:mm'}}</p>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-row>
+            <ion-col size="1">
+              <img src="../../../assets/icon/ion-map.svg" />
+            </ion-col>
+            <ion-col size="11">
+              <p class="booking-history-address">{{itembooking.address}}</p>
+            </ion-col>
+            <p [ngClass]="itembooking.colorStatus" class="booking-history-onfirmation">{{itembooking.bookingStatusName}}</p>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-content>
+<!--end history-data -->
+
+<!-- history-not-data -->
+<ion-content class="otp-container" *ngIf="historyNotData">
+    <ion-row style="padding: 20px 40px;">
+      <ion-col>
+        <ion-img src="../../../assets/images/history_booking.svg" class="pr-10"></ion-img>
+      </ion-col>
+    </ion-row>  
+
+    <ion-row style="padding: 0px 16px;">
+      <ion-col>
+        <p style="margin: 0px;">{{'bookingHistory.textFooter1' | translate}}</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="signup-btn">
+      <ion-button fill="clear" class="btn-login" (click)="boking()">
+          <p>{{'bookingHistory.booking' | translate}}</p>
+      </ion-button>
+    </ion-row>
+</ion-content>
+<!--end history-not-data -->

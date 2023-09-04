@@ -1,0 +1,118 @@
+.booking-detail-message {
+  font-family: SF Pro Text;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.24px;
+  color: #34A4B6;
+  margin: 0px;
+}
+
+.booking-detail-message-cancel {
+  font-family: SF Pro Text;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.24px;
+  color: #777777;
+  margin: 0px;
+}
+
+.boking-detail-btn {
+  padding: 0px 15px;
+
+  .btn-bottom {
+    height: 44px;
+    border-radius: 24px;
+    width: 100%;
+    border: 1px solid #34A4B6;
+  }
+
+  .test-bottom {
+    color: #34A4B6;
+  }
+
+  .btn-bottom-reset {
+    height: 44px;
+    border-radius: 24px;
+    width: 100%;
+    background: #34A4B6;
+  }
+
+  .test-bottom-reset {
+    color: #fff;
+  }
+
+
+}
+
+.boking-detail-call-btn {
+    padding: 0px 15px;
+
+  .btn-call {
+    height: 44px;
+    border-radius: 24px;
+    width: 100%;
+    border: 1px solid #1A1A1A;
+  }
+
+  .test-bottom {
+    color: #1A1A1A;
+  }
+}
+
+.booking-code{
+  text-align: center;
+}
+
+.content-evaluate{
+  width: 95%;
+  top: calc(50% - 231.5px);
+  left: 8px;
+  height: 481px;
+  position: absolute;
+  z-index: 1001;
+  margin: 0px auto;
+  border-radius: 18px;
+}
+
+.img-evaluate{
+  text-align: center;
+}
+
+.evaluate{
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -0.41px;
+  margin: 0px;
+  padding-top: 11px;
+}
+.text-evaluate{
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.24px;
+  margin: 0px;
+  padding-top: 6px;
+}
+.star{
+  text-align: center;
+}
+
+.icon-star{
+  padding-right: 8px;
+}
+ion-backdrop {
+  opacity: 0.3;
+}

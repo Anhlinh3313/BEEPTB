@@ -1,0 +1,49 @@
+<ion-content class="otp-container">
+    <ion-row class="otp-header">
+        <ion-toolbar>
+          <ion-icon name="arrow-back" slot="start" (click)="close()"></ion-icon>
+        </ion-toolbar>
+    </ion-row>
+
+    <ion-row class="otp-content">
+        <ion-col>
+            <h1>{{'otp.title' | translate}}</h1>
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="otp-content">
+        <ion-col>
+            <img src="../../../../assets/images/img_otp_update.svg" />
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="otp-content">
+        <ion-col>
+            <p>{{'otp.textFooter1' | translate}}</p>
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="otp-content">
+        <ion-col>
+            <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:4, allowNumbersOnly:true, inputStyles:{'width': '45px', 'height': '45px'}}"></ng-otp-input>
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="otp-content">
+        <ion-col>
+            <p>{{'otp.textFooter2' | translate}} {{timeCountdown}}s</p>
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="otp-content" style="margin-bottom: -3px;">
+        <ion-col>
+            <ion-button (click)="save()" fill="clear" class="otp-continue">{{'otp.buttonContinue' | translate}}</ion-button>
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="otp-content">
+        <ion-col>
+            <ion-button (click)="sendTo()" fill="clear" class="otp-resend">{{'otp.resend' | translate}}</ion-button>
+        </ion-col>
+    </ion-row>
+</ion-content>

@@ -1,0 +1,107 @@
+.booking-label{
+    padding-left: 16px;
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: #1A1A1A;
+}
+.booking-input{
+    padding-right: 15px;
+}
+.booking-text-info{
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: #1A1A1A;
+    .text-info-booking{
+        margin: 0px;
+        padding-left: 30px;
+        padding-top: 16px;
+    }
+}
+.check-motorcycle{
+    padding: 0px 16px;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-around;
+    .check-motorcycle-col{
+        background: #FFFFFF;
+        box-shadow: 0px 2px 20px rgb(0 0 0 / 10%);
+        border-radius: 4px;
+        text-align: center;
+        padding: 0px;
+        margin: auto 8px;
+        .name-number{
+            margin: 0px;
+            font-family: SF Pro Text;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 20px;
+            text-align: center;
+            letter-spacing: -0.24px;
+            color: #34A4B6;
+        }
+    }
+}
+.booking-img {
+    padding-top: 16px;
+}
+.number-booking{
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.41px;
+    color: #1A1A1A;
+    margin: 0px;
+}
+.number-money{
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.08px;
+    color: #1A1A1A;
+    opacity: 0.5;
+    margin: 0px;
+}
+.booking-datetime{
+    padding-left: 8px;
+}
+
+.booking-total-money{
+    float: right;
+    padding-right: 12px;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.38px;
+    color: #F2221B;
+}
+.text-booking{
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.41px;
+    color: #FFFFFF;
+}
+
+.booking-select{
+    padding-left: 8px;
+}

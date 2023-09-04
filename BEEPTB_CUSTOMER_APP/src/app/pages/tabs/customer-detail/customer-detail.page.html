@@ -1,0 +1,96 @@
+<ion-header class="cus-detail-header">
+    <ion-toolbar>
+      <ion-icon class="cus-info-back ion-margin-start" name="arrow-back" slot="start" (click)="back()"></ion-icon>
+      <ion-title style="text-align: center;">{{'customerDetail.title' | translate}}</ion-title>
+      <ion-button [disabled]="isDirtyInput" class="cus-info-save ion-margin-end" fill="clear" slot="end" (click)="save()" >{{'customerDetail.save' | translate}}</ion-button>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-row>
+        <ion-col>
+            <ion-item lines="none">
+                <ion-label style="opacity: 0.5;">{{'customerDetail.phoneNumber' | translate}}</ion-label>
+            </ion-item>
+            <ion-item class="ion-margin-bottom">
+                <ion-img src="../../../assets/icon/icon_phone_update.svg" class="ion-padding-end"></ion-img>
+                <ion-input [(ngModel)]="user.phoneNumber" maxLength="11" disabled></ion-input>
+            </ion-item>
+
+            <ion-item lines="none">
+                <ion-label style="opacity: 0.5;">{{'customerDetail.name' | translate}}</ion-label>
+            </ion-item>
+            <ion-item class="ion-margin-bottom">
+                <ion-img src="../../../assets/icon/icon_name_update.svg" style="padding-right: 10px;"></ion-img>
+                <ion-input type="text" [(ngModel)]="user.name" maxlength="30" (ionChange)="checkDirtyInput($event)"></ion-input>
+            </ion-item>
+
+            <ion-item lines="none">
+                <ion-label style="opacity: 0.5;">{{'customerDetail.birtDate' | translate}}</ion-label>
+            </ion-item>
+            <ion-item class="ion-margin-bottom">
+                <ion-img src="../../../assets/icon/icon_birthday_update.svg" style="padding-right: 10px;"></ion-img>
+                <ion-datetime [(ngModel)]="user.birthDate" [displayFormat]="dateFormat" [max]="maxDate" (ionChange)="checkDirtyInput($event)"></ion-datetime>
+            </ion-item>
+
+            <ion-item lines="none">
+                <ion-label style="opacity: 0.5;">{{'customerDetail.email' | translate}}</ion-label>
+            </ion-item>
+            <ion-item class="ion-margin-bottom">
+                <ion-img src="../../../assets/icon/email.svg" style="padding-right: 10px;"></ion-img>
+                <ion-input [(ngModel)]="user.email" (ionChange)="checkDirtyInput($event)"></ion-input>
+            </ion-item>
+
+            <ion-item style="--border-style: none;">
+                <ion-label style="opacity: 0.5;">{{'customerDetail.gender' | translate}}</ion-label>
+                <ion-radio-group [(ngModel)]="user.gender" style="display: flex;" mode="md" (ionChange)="checkDirtyInput($event)">
+                    <ion-item style="--border-style: none;">
+                        <ion-label>{{'customerDetail.male' | translate}}</ion-label>
+                        <ion-radio slot="start" [value]="true" style="--color-checked: #34A4B6;"></ion-radio>
+                    </ion-item>
+                
+                    <ion-item style="--border-style: none;">
+                        <ion-label>{{'customerDetail.female' | translate}}</ion-label>
+                        <ion-radio slot="start" [value]="false" style="--color-checked: #34A4B6;"></ion-radio>
+                    </ion-item>
+                </ion-radio-group>
+            </ion-item>
+
+            <ion-item lines="none">
+                <ion-label style="opacity: 0.5;">{{'customerDetail.Identity' | translate}}</ion-label>
+            </ion-item>
+            <ion-item class="ion-margin-bottom">
+                <ion-img src="../../../assets/icon/idcard-opacity.svg" style="padding-right: 10px;"></ion-img>
+                <ion-input [(ngModel)]="user.identityCard" (ionChange)="checkDirtyInput($event)"></ion-input>
+            </ion-item>
+
+            <ion-row class="ion-margin-top">
+                <ion-col size="6" class="ion-text-center">
+                    <img *ngIf="lstIdImg[0].base64" [src]="lstIdImg[0].base64" (click)="secondActionSheet(0, lstIdImg)" />
+                    <img *ngIf="!(lstIdImg[0].base64)" src="../../../../assets/images/image-default.svg" (click)="presentActionSheet(0, lstIdImg)"/>
+                </ion-col>
+                <ion-col size="6" class="ion-text-center">
+                    <img *ngIf="lstIdImg[1].base64" [src]="lstIdImg[1].base64" (click)="secondActionSheet(1, lstIdImg)"/>
+                    <img *ngIf="!(lstIdImg[1].base64)" src="../../../../assets/images/image-default.svg" (click)="presentActionSheet(1, lstIdImg)"/>
+                </ion-col>
+            </ion-row>
+
+            <ion-item lines="none">
+                <ion-img src="../../../assets/icon/idcard-opacity.svg" style="padding-right: 10px;"></ion-img>
+                <ion-label style="opacity: 0.5;">{{'customerDetail.driverCard' | translate}}</ion-label>
+            </ion-item>
+
+            <ion-row class="ion-margin-top">
+                <ion-col size="6" class="ion-text-center">
+                    <img *ngIf="lstDriverCard[0].base64" [src]="lstDriverCard[0].base64" (click)="secondActionSheet(0, lstDriverCard)"/>
+                    <img *ngIf="!(lstDriverCard[0].base64)" src="../../../../assets/images/image-default.svg" (click)="presentActionSheet(0, lstDriverCard)"/>
+                </ion-col>
+                <ion-col size="6" class="ion-text-center">
+                    <img *ngIf="lstDriverCard[1].base64" [src]="lstDriverCard[1].base64"(click)="secondActionSheet(1, lstDriverCard)" />
+                    <img *ngIf="!(lstDriverCard[1].base64)" src="../../../../assets/images/image-default.svg" (click)="presentActionSheet(1, lstDriverCard)" />
+                </ion-col>
+            </ion-row>
+        </ion-col>
+    </ion-row>
+</ion-content>
+  
+  

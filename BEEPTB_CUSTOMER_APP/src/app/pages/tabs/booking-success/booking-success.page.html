@@ -1,0 +1,43 @@
+<ion-content class="otp-container">
+  <ion-row class="otp-header">
+      <ion-toolbar class="update-toolbar">
+        <p class="text-booking">{{'booking.startingTime' | translate}}</p>
+      </ion-toolbar>
+  </ion-row>
+
+  <ion-row class="booking-success-p">
+    <ion-col>
+        <p>{{'booking.successfullyBooking' | translate}}</p>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row class="otp-content">
+    <ion-col>
+        <img src="../../../assets/images/img-booking-success.svg" />
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="otp-content">
+      <ion-col>
+          <p class="forgot-password-message">{{'booking.text1' | translate}}</p>
+      </ion-col>
+  </ion-row>
+
+  <ion-row class="booking-success-btn">
+      <ion-col style="padding-top: 20px;">
+          <ion-button fill="clear" class="btn-login" (click)="bookingDetail()">
+            <p style="color: #fff;">{{'booking.viewOrderDetails' | translate}}</p>
+          </ion-button>
+      </ion-col>
+  </ion-row> 
+
+  <ion-row class="booking-success-btn">
+    <ion-col>
+        <ion-button (click)="home()" fill="clear" class="booking-success-login">
+          <p style="color: #34A4B6;">{{'booking.onTheHomepage' | translate}}</p>
+        </ion-button>
+    </ion-col>
+</ion-row> 
+</ion-content>
+

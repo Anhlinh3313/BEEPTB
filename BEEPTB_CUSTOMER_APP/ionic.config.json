@@ -1,0 +1,10 @@
+{
+  "name": "Customer",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}

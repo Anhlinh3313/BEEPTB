@@ -1,0 +1,63 @@
+{
+  "_from": "cordova-plugin-background-geolocation",
+  "_id": "cordova-plugin-background-geolocation@1.0.6",
+  "_inBundle": false,
+  "_integrity": "sha1-b7FJQz8rowCSXEO4yzc00MYh2V4=",
+  "_location": "/cordova-plugin-background-geolocation",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-background-geolocation",
+    "name": "cordova-plugin-background-geolocation",
+    "escapedName": "cordova-plugin-background-geolocation",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-background-geolocation/-/cordova-plugin-background-geolocation-1.0.6.tgz",
+  "_shasum": "6fb149433f2ba300925c43b8cb3734d0c621d95e",
+  "_spec": "cordova-plugin-background-geolocation",
+  "_where": "D:\\angular\\BEEPTB\\BEEPTB_CUSTOMER_APP",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/ZenCity/cordova-plugin-background-geolocation/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-background-geolocation-zencity",
+    "platforms": [
+      "android",
+      "ios",
+      "wp8"
+    ]
+  },
+  "deprecated": false,
+  "description": "Cordova Background GeoLocation Plugin",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/ZenCity/cordova-plugin-background-geolocation#readme",
+  "keywords": [
+    "phonegap",
+    "background geolocation",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-wp8"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-background-geolocation",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZenCity/cordova-plugin-background-geolocation.git"
+  },
+  "version": "1.0.6"
+}

@@ -1,0 +1,44 @@
+<ion-content>
+  <ion-row class="login-bg">
+    <ion-row class="login-logo">
+      <img src="../../../assets/images/img_logo-login.png" />
+    </ion-row>
+
+    <ion-row class="login-form">
+      <ion-row class="login-btn">
+        <ion-button fill="clear" class="btn-login" (click)="signIn()">
+          <p>{{'login.signin' | translate}}</p>
+        </ion-button>
+      </ion-row>
+      <ion-row class="register-btn">
+        <ion-button fill="clear" class="btn-register" (click)="goToSignUp()">
+          <p>{{'login.signup' | translate}}</p>
+        </ion-button>
+      </ion-row>
+    </ion-row>
+
+    <ion-row class="login-footer">
+      <ion-col class="login-vn-col">
+        <p class="login-version">
+          {{'login.version' | translate}} 0.0.3
+        </p>
+      </ion-col>
+
+      <ion-col class="login-translate">
+        <ion-row style="height: 100%;">
+          <ion-col>
+            <p (click)="changelanguage('vi')" [style]="checkRedVN" class="login-vn">VN</p>
+          </ion-col>
+          <span class="login-line">|</span>
+          <ion-col>
+            <p class="login-eng"> 
+              <span (click)="changelanguage('en')" [style]="checkRedENG"> ENG</span>
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+
+    </ion-row>
+  </ion-row>
+</ion-content>
+

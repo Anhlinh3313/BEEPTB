@@ -1,0 +1,125 @@
+<ion-content>   
+    <ion-row class="login-bg">
+        <ion-row class="signup-logo">
+            <img src="../../../assets/images/img_beep_logo.png"/>
+        </ion-row>
+        <ion-row class="signup-title">
+            <ion-col>
+                <h1>{{'signup.title' | translate}}</h1>
+            </ion-col>
+        </ion-row>
+            <ion-row class="signup-form">
+                <ion-col>
+                    <ion-row>
+                        <ion-col>
+                            <ion-item [ngClass]="errorPhone && checkPhone ? 'signup-item' : 'signup-item-error'" style="margin-top: 30px; margin-bottom: 5px;">
+                                <ion-img [hidden]="!errorPhone || !checkPhone" src="../../../assets/icon/icon_phone_update.svg" class="pr-10"></ion-img>
+                                <ion-img [hidden]="errorPhone && checkPhone" src="../../../assets/icon/Vector-red.svg" class="pr-10"></ion-img>
+                                <ion-input [ngClass]="errorPhone ? '' : 'input-error'" [(ngModel)]="phoneNumber" type="tel" placeholder="{{'signup.phone' | translate}} *" (ionBlur)="inputPhone()" maxlength="11"></ion-input>
+                            </ion-item>
+                            <span class="error-text" *ngIf="!errorPhone">
+                                Số điện thoại là bắt buộc.
+                            </span>
+                            <span class="error-text" *ngIf="!checkPhone && errorPhone">
+                                Số điện thoại đã tồn tại.
+                            </span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-item [ngClass]="errorPassword && errorPasswordLength ? 'signup-item' : 'signup-item-error'" class="signup-item" style="margin-bottom: 5px;">
+                                <ion-img [hidden]="!errorPassword || !errorPasswordLength" src="../../../assets/icon/password.svg" class="pr-10"></ion-img>
+                                <ion-img [hidden]="errorPassword && errorPasswordLength" src="../../../assets/icon/password-red.svg" class="pr-10"></ion-img>
+                                <ion-input [ngClass]="errorPassword ? '' : 'input-error'" [(ngModel)]="passWord" [type]="inputElementPassword.type" placeholder="{{'signup.password' | translate}} *" (ionBlur)="inputPass()"></ion-input>
+                                <ion-img [src]="inputElementPassword.src" (click)="onClickPassword()" [hidden]="inputElementPassword.hidden"></ion-img>
+                            </ion-item>
+                            <span class="error-text" *ngIf="!errorPassword">
+                                Mật khẩu là bắt buộc.
+                            </span>
+                            <span class="error-text" *ngIf="!errorPasswordLength && errorPassword">
+                                Mật khẩu không nhỏ hơn 6 kí tự.
+                            </span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-item [ngClass]="errorEmail && checkEmailInput ? 'signup-item' : 'signup-item-error'" class="signup-item" style="margin-bottom: 5px;">
+                                <ion-img [hidden]="!errorEmail || !checkEmailInput" src="../../../assets/icon/email.svg" class="pr-10"></ion-img>
+                                <ion-img [hidden]="errorEmail && checkEmailInput" src="../../../assets/icon/email-red.svg" class="pr-10"></ion-img>
+                                <ion-input [ngClass]="errorEmail ? '' : 'input-error'" [(ngModel)]="email" placeholder="{{'signup.email' | translate}} *" (ionBlur)="inputEmail()"></ion-input>
+                            </ion-item>
+                            <span class="error-text" *ngIf="!errorEmail">
+                                Email là bắt buộc.
+                            </span>
+                            <span class="error-text" *ngIf="!checkEmailInput && errorEmail">
+                                Email không đúng định dạng.
+                            </span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-item [ngClass]="errorBirthday && checkBirthdayInput ? 'signup-item' : 'signup-item-error'" class="signup-item" style="margin-bottom: 5px;">
+                                <ion-img [hidden]="!errorBirthday || !checkBirthdayInput" src="../../../assets/icon/icon_birthday_update.svg" class="pr-10"></ion-img>
+                                <ion-img [hidden]="errorBirthday && checkBirthdayInput" src="../../../assets/icon/birthday-red.svg" class="pr-10"></ion-img>
+                                <ion-datetime [ngClass]="errorBirthday ? '' : 'input-error'" [(ngModel)]="birthDate" displayFormat="DD/MM/YYYY" placeholder="{{'signup.birthday' | translate}} *" (ionBlur)="inputBirthDate()"></ion-datetime>
+                            </ion-item>
+                            <span class="error-text" *ngIf="!errorBirthday">
+                                Ngày sinh là bắt buộc.
+                            </span>
+                            <span class="error-text" *ngIf="!checkBirthdayInput && errorBirthday">
+                                ngày sinh không được lớn hơn ngày hiện tại.
+                            </span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-item [ngClass]="errorName && checkName ? 'signup-item' : 'signup-item-error'" class="signup-item" style="margin-bottom: 5px;">
+                                <ion-img [hidden]="!errorName || !checkName" src="../../../assets/icon/icon_name_update.svg" class="pr-10"></ion-img>
+                                <ion-img [hidden]="errorName && checkName" src="../../../assets/icon/name-red.svg" class="pr-10"></ion-img>
+                                <ion-input type="text" [ngClass]="errorName ? '' : 'input-error'" [(ngModel)]="name" placeholder="{{'signup.name' | translate}} *" (ionChange)="inputName()" maxlength="30"></ion-input>
+                            </ion-item>
+                            <span class="error-text" *ngIf="!errorName">
+                                Họ tên là bắt buộc.
+                            </span>
+                            <span class="error-text" *ngIf="!checkName && errorName">
+                                Họ tên không được quá 30 ký tự
+                            </span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row style="display: inline-flex; width: 100%;">
+                        <ion-col>
+                            <ion-item class="signup-item no-border">
+                                <ion-label class="check-gende">
+                                    {{'signup.gender' | translate}}
+                                </ion-label>
+                                <ion-radio-group [(ngModel)]="gender" [value]="true" style="display: flex;" mode="md">
+                                    <ion-item>
+                                        <ion-label>{{'signup.male' | translate}}</ion-label>
+                                        <ion-radio slot="start" [value]="true" style="--color-checked: #34A4B6;"></ion-radio>
+                                    </ion-item>
+                                
+                                    <ion-item>
+                                        <ion-label>{{'signup.female' | translate}}</ion-label>
+                                        <ion-radio slot="start" [value]="false" style="--color-checked: #34A4B6;"></ion-radio>
+                                    </ion-item>
+                                </ion-radio-group>
+                            </ion-item> 
+                        </ion-col>
+                    </ion-row>
+                    <ion-row class="signup-btn">
+                        <ion-col>
+                            <ion-button fill="clear" class="btn-login" (click)="signup()">
+                                <p>{{'login.signup' | translate}}</p>
+                            </ion-button>
+                        </ion-col>
+                    </ion-row>
+    
+                    <ion-row class="signup-text-contain">
+                        <ion-col>
+                            <p class="signup-text">{{'signup.textFooter1' | translate}} <a (click)="signIn()" style="color: #34A4B6">{{'signup.textFooter2' | translate}}</a></p>
+                        </ion-col>
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+    </ion-row>
+</ion-content> 

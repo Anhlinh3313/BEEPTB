@@ -1,0 +1,51 @@
+<ion-content>
+  <ion-row class="login-bg">
+    <ion-row class="signup-logo">
+      <img src="../../../assets/images/img_beep_logo.png"/>
+    </ion-row>
+    <ion-row class="signup-title">
+        <ion-col>
+            <h1 class="login-signin">{{'signin.login' | translate}}</h1>
+        </ion-col>
+    </ion-row>
+    <ion-row class="signin-bg">
+      <ion-card class="signin-card">
+        <ion-item class="input" lines="inset">
+          <ion-label>
+            <img src="../../../assets/icon/icon_phone_update.svg"/>
+          </ion-label>
+          <ion-input [(ngModel)]="userName" type="tel" placeholder="{{'signin.phone' | translate}}">
+          </ion-input>
+        </ion-item>
+
+        <ion-item class="input" lines="inset">
+          <ion-label>
+            <img src="../../../assets/icon/icon_passWord_update.svg"/>
+          </ion-label>
+          <ion-input [type]="inputElementPassword.type" [(ngModel)]="passWord" placeholder="{{'signin.passWord' | translate}}">
+          </ion-input>
+          <ion-img [src]="inputElementPassword.src" (click)="onClickPassword()" [hidden]="inputElementPassword.hidden"></ion-img>
+        </ion-item> 
+
+        <ion-row class="register-btn">
+          <ion-button (click)="signIn()" fill="clear" class="signin-button">
+            <p>{{'signin.login' | translate}}</p>
+          </ion-button>
+        </ion-row> 
+
+        <ion-row class="signin-register">
+          <p (click)="forgotPassword()">{{'signin.forgotPassword' | translate}}</p>
+        </ion-row>
+
+        <ion-row class="signin-row-img">
+          <ion-row class="signin-img">
+            <img src="../../../assets/images/img_signIn_update.svg" />
+          </ion-row>
+          <ion-row class="signin-create-signup">
+            <p>{{'signin.textFooter1' | translate}}<span (click)="signup()" style="color: #34A4B6;"> {{'signin.textFooter2' | translate}}</span></p>
+          </ion-row>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+  </ion-row>
+</ion-content>

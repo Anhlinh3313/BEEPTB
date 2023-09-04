@@ -1,0 +1,2371 @@
+/** Ionic CSS Variables **/
+:root {
+  /** primary **/
+  --ion-color-primary: #3880ff;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #3171e0;
+  --ion-color-primary-tint: #4c8dff;
+  /** secondary **/
+  --ion-color-secondary: #3dc2ff;
+  --ion-color-secondary-rgb: 61, 194, 255;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #36abe0;
+  --ion-color-secondary-tint: #50c8ff;
+  /** tertiary **/
+  --ion-color-tertiary: #5260ff;
+  --ion-color-tertiary-rgb: 82, 96, 255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #4854e0;
+  --ion-color-tertiary-tint: #6370ff;
+  /** success **/
+  --ion-color-success: #2dd36f;
+  --ion-color-success-rgb: 45, 211, 111;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #28ba62;
+  --ion-color-success-tint: #42d77d;
+  /** warning **/
+  --ion-color-warning: #ffc409;
+  --ion-color-warning-rgb: 255, 196, 9;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #e0ac08;
+  --ion-color-warning-tint: #ffca22;
+  /** danger **/
+  --ion-color-danger: #eb445a;
+  --ion-color-danger-rgb: 235, 68, 90;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #cf3c4f;
+  --ion-color-danger-tint: #ed576b;
+  /** dark **/
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34, 36, 40;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+  /** medium **/
+  --ion-color-medium: #92949c;
+  --ion-color-medium-rgb: 146, 148, 156;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #808289;
+  --ion-color-medium-tint: #9d9fa6;
+  /** light **/
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 245, 248;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+}
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+/* Core CSS required for Ionic components to work properly */
+html.ios {
+  --ion-default-font: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto", sans-serif;
+}
+html.md {
+  --ion-default-font: "Roboto", "Helvetica Neue", sans-serif;
+}
+html {
+  --ion-font-family: var(--ion-default-font);
+}
+body {
+  background: var(--ion-background-color);
+}
+body.backdrop-no-scroll {
+  overflow: hidden;
+}
+html.ios ion-modal.modal-card .ion-page > ion-header > ion-toolbar:first-of-type {
+  padding-top: 0px;
+}
+html.ios ion-modal .ion-page {
+  border-radius: inherit;
+}
+.ion-color-primary {
+  --ion-color-base: var(--ion-color-primary, #3880ff) !important;
+  --ion-color-base-rgb: var(--ion-color-primary-rgb, 56, 128, 255) !important;
+  --ion-color-contrast: var(--ion-color-primary-contrast, #fff) !important;
+  --ion-color-contrast-rgb: var(--ion-color-primary-contrast-rgb, 255, 255, 255) !important;
+  --ion-color-shade: var(--ion-color-primary-shade, #3171e0) !important;
+  --ion-color-tint: var(--ion-color-primary-tint, #4c8dff) !important;
+}
+.ion-color-secondary {
+  --ion-color-base: var(--ion-color-secondary, #3dc2ff) !important;
+  --ion-color-base-rgb: var(--ion-color-secondary-rgb, 61, 194, 255) !important;
+  --ion-color-contrast: var(--ion-color-secondary-contrast, #fff) !important;
+  --ion-color-contrast-rgb: var(--ion-color-secondary-contrast-rgb, 255, 255, 255) !important;
+  --ion-color-shade: var(--ion-color-secondary-shade, #36abe0) !important;
+  --ion-color-tint: var(--ion-color-secondary-tint, #50c8ff) !important;
+}
+.ion-color-tertiary {
+  --ion-color-base: var(--ion-color-tertiary, #5260ff) !important;
+  --ion-color-base-rgb: var(--ion-color-tertiary-rgb, 82, 96, 255) !important;
+  --ion-color-contrast: var(--ion-color-tertiary-contrast, #fff) !important;
+  --ion-color-contrast-rgb: var(--ion-color-tertiary-contrast-rgb, 255, 255, 255) !important;
+  --ion-color-shade: var(--ion-color-tertiary-shade, #4854e0) !important;
+  --ion-color-tint: var(--ion-color-tertiary-tint, #6370ff) !important;
+}
+.ion-color-success {
+  --ion-color-base: var(--ion-color-success, #2dd36f) !important;
+  --ion-color-base-rgb: var(--ion-color-success-rgb, 45, 211, 111) !important;
+  --ion-color-contrast: var(--ion-color-success-contrast, #fff) !important;
+  --ion-color-contrast-rgb: var(--ion-color-success-contrast-rgb, 255, 255, 255) !important;
+  --ion-color-shade: var(--ion-color-success-shade, #28ba62) !important;
+  --ion-color-tint: var(--ion-color-success-tint, #42d77d) !important;
+}
+.ion-color-warning {
+  --ion-color-base: var(--ion-color-warning, #ffc409) !important;
+  --ion-color-base-rgb: var(--ion-color-warning-rgb, 255, 196, 9) !important;
+  --ion-color-contrast: var(--ion-color-warning-contrast, #000) !important;
+  --ion-color-contrast-rgb: var(--ion-color-warning-contrast-rgb, 0, 0, 0) !important;
+  --ion-color-shade: var(--ion-color-warning-shade, #e0ac08) !important;
+  --ion-color-tint: var(--ion-color-warning-tint, #ffca22) !important;
+}
+.ion-color-danger {
+  --ion-color-base: var(--ion-color-danger, #eb445a) !important;
+  --ion-color-base-rgb: var(--ion-color-danger-rgb, 235, 68, 90) !important;
+  --ion-color-contrast: var(--ion-color-danger-contrast, #fff) !important;
+  --ion-color-contrast-rgb: var(--ion-color-danger-contrast-rgb, 255, 255, 255) !important;
+  --ion-color-shade: var(--ion-color-danger-shade, #cf3c4f) !important;
+  --ion-color-tint: var(--ion-color-danger-tint, #ed576b) !important;
+}
+.ion-color-light {
+  --ion-color-base: var(--ion-color-light, #f4f5f8) !important;
+  --ion-color-base-rgb: var(--ion-color-light-rgb, 244, 245, 248) !important;
+  --ion-color-contrast: var(--ion-color-light-contrast, #000) !important;
+  --ion-color-contrast-rgb: var(--ion-color-light-contrast-rgb, 0, 0, 0) !important;
+  --ion-color-shade: var(--ion-color-light-shade, #d7d8da) !important;
+  --ion-color-tint: var(--ion-color-light-tint, #f5f6f9) !important;
+}
+.ion-color-medium {
+  --ion-color-base: var(--ion-color-medium, #92949c) !important;
+  --ion-color-base-rgb: var(--ion-color-medium-rgb, 146, 148, 156) !important;
+  --ion-color-contrast: var(--ion-color-medium-contrast, #fff) !important;
+  --ion-color-contrast-rgb: var(--ion-color-medium-contrast-rgb, 255, 255, 255) !important;
+  --ion-color-shade: var(--ion-color-medium-shade, #808289) !important;
+  --ion-color-tint: var(--ion-color-medium-tint, #9d9fa6) !important;
+}
+.ion-color-dark {
+  --ion-color-base: var(--ion-color-dark, #222428) !important;
+  --ion-color-base-rgb: var(--ion-color-dark-rgb, 34, 36, 40) !important;
+  --ion-color-contrast: var(--ion-color-dark-contrast, #fff) !important;
+  --ion-color-contrast-rgb: var(--ion-color-dark-contrast-rgb, 255, 255, 255) !important;
+  --ion-color-shade: var(--ion-color-dark-shade, #1e2023) !important;
+  --ion-color-tint: var(--ion-color-dark-tint, #383a3e) !important;
+}
+.ion-page {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  contain: layout size style;
+  overflow: hidden;
+  z-index: 0;
+}
+.split-pane-visible > .ion-page.split-pane-main {
+  position: relative;
+}
+ion-route,
+ion-route-redirect,
+ion-router,
+ion-select-option,
+ion-nav-controller,
+ion-menu-controller,
+ion-action-sheet-controller,
+ion-alert-controller,
+ion-loading-controller,
+ion-modal-controller,
+ion-picker-controller,
+ion-popover-controller,
+ion-toast-controller,
+.ion-page-hidden,
+[hidden] {
+  /* stylelint-disable-next-line declaration-no-important */
+  display: none !important;
+}
+.ion-page-invisible {
+  opacity: 0;
+}
+.can-go-back > ion-header ion-back-button {
+  display: block;
+}
+html.plt-ios.plt-hybrid, html.plt-ios.plt-pwa {
+  --ion-statusbar-padding: 20px;
+}
+@supports (padding-top: 20px) {
+  html {
+    --ion-safe-area-top: var(--ion-statusbar-padding);
+  }
+}
+@supports (padding-top: constant(safe-area-inset-top)) {
+  html {
+    --ion-safe-area-top: constant(safe-area-inset-top);
+    --ion-safe-area-bottom: constant(safe-area-inset-bottom);
+    --ion-safe-area-left: constant(safe-area-inset-left);
+    --ion-safe-area-right: constant(safe-area-inset-right);
+  }
+}
+@supports (padding-top: env(safe-area-inset-top)) {
+  html {
+    --ion-safe-area-top: env(safe-area-inset-top);
+    --ion-safe-area-bottom: env(safe-area-inset-bottom);
+    --ion-safe-area-left: env(safe-area-inset-left);
+    --ion-safe-area-right: env(safe-area-inset-right);
+  }
+}
+ion-card.ion-color .ion-inherit-color,
+ion-card-header.ion-color .ion-inherit-color {
+  color: inherit;
+}
+.menu-content {
+  transform: translate3d(0,  0,  0);
+}
+.menu-content-open {
+  cursor: pointer;
+  touch-action: manipulation;
+  pointer-events: none;
+}
+.ios .menu-content-reveal {
+  box-shadow: -8px 0 42px rgba(0, 0, 0, 0.08);
+}
+[dir=rtl].ios .menu-content-reveal {
+  box-shadow: 8px 0 42px rgba(0, 0, 0, 0.08);
+}
+.md .menu-content-reveal {
+  box-shadow: 4px 0px 16px rgba(0, 0, 0, 0.18);
+}
+.md .menu-content-push {
+  box-shadow: 4px 0px 16px rgba(0, 0, 0, 0.18);
+}
+/* Basic CSS for apps built with Ionic */
+audio,
+canvas,
+progress,
+video {
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+b,
+strong {
+  font-weight: bold;
+}
+img {
+  max-width: 100%;
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  height: 1px;
+  border-width: 0;
+  box-sizing: content-box;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+label,
+input,
+select,
+textarea {
+  font-family: inherit;
+  line-height: normal;
+}
+textarea {
+  overflow: auto;
+  height: auto;
+  font: inherit;
+  color: inherit;
+}
+textarea::placeholder {
+  padding-left: 2px;
+}
+form,
+input,
+optgroup,
+select {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+a,
+a div,
+a span,
+a ion-icon,
+a ion-label,
+button,
+button div,
+button span,
+button ion-icon,
+button ion-label,
+.ion-tappable,
+[tappable],
+[tappable] div,
+[tappable] span,
+[tappable] ion-icon,
+[tappable] ion-label,
+input,
+textarea {
+  touch-action: manipulation;
+}
+a ion-label,
+button ion-label {
+  pointer-events: none;
+}
+button {
+  border: 0;
+  border-radius: 0;
+  font-family: inherit;
+  font-style: inherit;
+  font-variant: inherit;
+  line-height: 1;
+  text-transform: none;
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+[tappable] {
+  cursor: pointer;
+}
+a[disabled],
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+input[type=checkbox],
+input[type=radio] {
+  padding: 0;
+  box-sizing: border-box;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+html {
+  width: 100%;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+}
+html:not(.hydrated) body {
+  display: none;
+}
+html.plt-pwa {
+  height: 100vh;
+}
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+  touch-action: manipulation;
+  -webkit-user-drag: none;
+  -ms-content-zooming: none;
+  word-wrap: break-word;
+  overscroll-behavior-y: none;
+  -webkit-text-size-adjust: none;
+          text-size-adjust: none;
+}
+html {
+  font-family: var(--ion-font-family);
+}
+a {
+  background-color: transparent;
+  color: var(--ion-color-primary, #3880ff);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 16px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+h1 {
+  margin-top: 20px;
+  font-size: 26px;
+}
+h2 {
+  margin-top: 18px;
+  font-size: 24px;
+}
+h3 {
+  font-size: 22px;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 18px;
+}
+h6 {
+  font-size: 16px;
+}
+small {
+  font-size: 75%;
+}
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+.ion-hide {
+  display: none !important;
+}
+.ion-hide-up {
+  display: none !important;
+}
+.ion-hide-down {
+  display: none !important;
+}
+@media (min-width: 576px) {
+  .ion-hide-sm-up {
+    display: none !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .ion-hide-sm-down {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .ion-hide-md-up {
+    display: none !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .ion-hide-md-down {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .ion-hide-lg-up {
+    display: none !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .ion-hide-lg-down {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .ion-hide-xl-up {
+    display: none !important;
+  }
+}
+@media (max-width: 1199.98px) {
+  .ion-hide-xl-down {
+    display: none !important;
+  }
+}
+/* Optional CSS utils that can be commented out */
+.ion-no-padding {
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.ion-padding {
+  --padding-start: var(--ion-padding, 16px);
+  --padding-end: var(--ion-padding, 16px);
+  --padding-top: var(--ion-padding, 16px);
+  --padding-bottom: var(--ion-padding, 16px);
+  padding-left: var(--ion-padding, 16px);
+  padding-right: var(--ion-padding, 16px);
+  padding-top: var(--ion-padding, 16px);
+  padding-bottom: var(--ion-padding, 16px);
+}
+@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+  .ion-padding {
+    padding-left: unset;
+    padding-right: unset;
+    padding-inline-start: var(--ion-padding, 16px);
+    padding-inline-end: var(--ion-padding, 16px);
+  }
+}
+.ion-padding-top {
+  --padding-top: var(--ion-padding, 16px);
+  padding-top: var(--ion-padding, 16px);
+}
+.ion-padding-start {
+  --padding-start: var(--ion-padding, 16px);
+  padding-left: var(--ion-padding, 16px);
+}
+@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+  .ion-padding-start {
+    padding-left: unset;
+    padding-inline-start: var(--ion-padding, 16px);
+  }
+}
+.ion-padding-end {
+  --padding-end: var(--ion-padding, 16px);
+  padding-right: var(--ion-padding, 16px);
+}
+@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+  .ion-padding-end {
+    padding-right: unset;
+    padding-inline-end: var(--ion-padding, 16px);
+  }
+}
+.ion-padding-bottom {
+  --padding-bottom: var(--ion-padding, 16px);
+  padding-bottom: var(--ion-padding, 16px);
+}
+.ion-padding-vertical {
+  --padding-top: var(--ion-padding, 16px);
+  --padding-bottom: var(--ion-padding, 16px);
+  padding-top: var(--ion-padding, 16px);
+  padding-bottom: var(--ion-padding, 16px);
+}
+.ion-padding-horizontal {
+  --padding-start: var(--ion-padding, 16px);
+  --padding-end: var(--ion-padding, 16px);
+  padding-left: var(--ion-padding, 16px);
+  padding-right: var(--ion-padding, 16px);
+}
+@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+  .ion-padding-horizontal {
+    padding-left: unset;
+    padding-right: unset;
+    padding-inline-start: var(--ion-padding, 16px);
+    padding-inline-end: var(--ion-padding, 16px);
+  }
+}
+.ion-no-margin {
+  --margin-start: 0;
+  --margin-end: 0;
+  --margin-top: 0;
+  --margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.ion-margin {
+  --margin-start: var(--ion-margin, 16px);
+  --margin-end: var(--ion-margin, 16px);
+  --margin-top: var(--ion-margin, 16px);
+  --margin-bottom: var(--ion-margin, 16px);
+  margin-left: var(--ion-margin, 16px);
+  margin-right: var(--ion-margin, 16px);
+  margin-top: var(--ion-margin, 16px);
+  margin-bottom: var(--ion-margin, 16px);
+}
+@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+  .ion-margin {
+    margin-left: unset;
+    margin-right: unset;
+    margin-inline-start: var(--ion-margin, 16px);
+    margin-inline-end: var(--ion-margin, 16px);
+  }
+}
+.ion-margin-top {
+  --margin-top: var(--ion-margin, 16px);
+  margin-top: var(--ion-margin, 16px);
+}
+.ion-margin-start {
+  --margin-start: var(--ion-margin, 16px);
+  margin-left: var(--ion-margin, 16px);
+}
+@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+  .ion-margin-start {
+    margin-left: unset;
+    margin-inline-start: var(--ion-margin, 16px);
+  }
+}
+.ion-margin-end {
+  --margin-end: var(--ion-margin, 16px);
+  margin-right: var(--ion-margin, 16px);
+}
+@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+  .ion-margin-end {
+    margin-right: unset;
+    margin-inline-end: var(--ion-margin, 16px);
+  }
+}
+.ion-margin-bottom {
+  --margin-bottom: var(--ion-margin, 16px);
+  margin-bottom: var(--ion-margin, 16px);
+}
+.ion-margin-vertical {
+  --margin-top: var(--ion-margin, 16px);
+  --margin-bottom: var(--ion-margin, 16px);
+  margin-top: var(--ion-margin, 16px);
+  margin-bottom: var(--ion-margin, 16px);
+}
+.ion-margin-horizontal {
+  --margin-start: var(--ion-margin, 16px);
+  --margin-end: var(--ion-margin, 16px);
+  margin-left: var(--ion-margin, 16px);
+  margin-right: var(--ion-margin, 16px);
+}
+@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+  .ion-margin-horizontal {
+    margin-left: unset;
+    margin-right: unset;
+    margin-inline-start: var(--ion-margin, 16px);
+    margin-inline-end: var(--ion-margin, 16px);
+  }
+}
+.ion-float-left {
+  float: left !important;
+}
+.ion-float-right {
+  float: right !important;
+}
+.ion-float-start {
+  float: left !important;
+}
+[dir=rtl] .ion-float-start, :host-context([dir=rtl]) .ion-float-start {
+  float: right !important;
+}
+.ion-float-end {
+  float: right !important;
+}
+[dir=rtl] .ion-float-end, :host-context([dir=rtl]) .ion-float-end {
+  float: left !important;
+}
+@media (min-width: 576px) {
+  .ion-float-sm-left {
+    float: left !important;
+  }
+
+  .ion-float-sm-right {
+    float: right !important;
+  }
+
+  .ion-float-sm-start {
+    float: left !important;
+  }
+  [dir=rtl] .ion-float-sm-start, :host-context([dir=rtl]) .ion-float-sm-start {
+    float: right !important;
+  }
+
+  .ion-float-sm-end {
+    float: right !important;
+  }
+  [dir=rtl] .ion-float-sm-end, :host-context([dir=rtl]) .ion-float-sm-end {
+    float: left !important;
+  }
+}
+@media (min-width: 768px) {
+  .ion-float-md-left {
+    float: left !important;
+  }
+
+  .ion-float-md-right {
+    float: right !important;
+  }
+
+  .ion-float-md-start {
+    float: left !important;
+  }
+  [dir=rtl] .ion-float-md-start, :host-context([dir=rtl]) .ion-float-md-start {
+    float: right !important;
+  }
+
+  .ion-float-md-end {
+    float: right !important;
+  }
+  [dir=rtl] .ion-float-md-end, :host-context([dir=rtl]) .ion-float-md-end {
+    float: left !important;
+  }
+}
+@media (min-width: 992px) {
+  .ion-float-lg-left {
+    float: left !important;
+  }
+
+  .ion-float-lg-right {
+    float: right !important;
+  }
+
+  .ion-float-lg-start {
+    float: left !important;
+  }
+  [dir=rtl] .ion-float-lg-start, :host-context([dir=rtl]) .ion-float-lg-start {
+    float: right !important;
+  }
+
+  .ion-float-lg-end {
+    float: right !important;
+  }
+  [dir=rtl] .ion-float-lg-end, :host-context([dir=rtl]) .ion-float-lg-end {
+    float: left !important;
+  }
+}
+@media (min-width: 1200px) {
+  .ion-float-xl-left {
+    float: left !important;
+  }
+
+  .ion-float-xl-right {
+    float: right !important;
+  }
+
+  .ion-float-xl-start {
+    float: left !important;
+  }
+  [dir=rtl] .ion-float-xl-start, :host-context([dir=rtl]) .ion-float-xl-start {
+    float: right !important;
+  }
+
+  .ion-float-xl-end {
+    float: right !important;
+  }
+  [dir=rtl] .ion-float-xl-end, :host-context([dir=rtl]) .ion-float-xl-end {
+    float: left !important;
+  }
+}
+.ion-text-center {
+  text-align: center !important;
+}
+.ion-text-justify {
+  text-align: justify !important;
+}
+.ion-text-start {
+  text-align: start !important;
+}
+.ion-text-end {
+  text-align: end !important;
+}
+.ion-text-left {
+  text-align: left !important;
+}
+.ion-text-right {
+  text-align: right !important;
+}
+.ion-text-nowrap {
+  white-space: nowrap !important;
+}
+.ion-text-wrap {
+  white-space: normal !important;
+}
+@media (min-width: 576px) {
+  .ion-text-sm-center {
+    text-align: center !important;
+  }
+
+  .ion-text-sm-justify {
+    text-align: justify !important;
+  }
+
+  .ion-text-sm-start {
+    text-align: start !important;
+  }
+
+  .ion-text-sm-end {
+    text-align: end !important;
+  }
+
+  .ion-text-sm-left {
+    text-align: left !important;
+  }
+
+  .ion-text-sm-right {
+    text-align: right !important;
+  }
+
+  .ion-text-sm-nowrap {
+    white-space: nowrap !important;
+  }
+
+  .ion-text-sm-wrap {
+    white-space: normal !important;
+  }
+}
+@media (min-width: 768px) {
+  .ion-text-md-center {
+    text-align: center !important;
+  }
+
+  .ion-text-md-justify {
+    text-align: justify !important;
+  }
+
+  .ion-text-md-start {
+    text-align: start !important;
+  }
+
+  .ion-text-md-end {
+    text-align: end !important;
+  }
+
+  .ion-text-md-left {
+    text-align: left !important;
+  }
+
+  .ion-text-md-right {
+    text-align: right !important;
+  }
+
+  .ion-text-md-nowrap {
+    white-space: nowrap !important;
+  }
+
+  .ion-text-md-wrap {
+    white-space: normal !important;
+  }
+}
+@media (min-width: 992px) {
+  .ion-text-lg-center {
+    text-align: center !important;
+  }
+
+  .ion-text-lg-justify {
+    text-align: justify !important;
+  }
+
+  .ion-text-lg-start {
+    text-align: start !important;
+  }
+
+  .ion-text-lg-end {
+    text-align: end !important;
+  }
+
+  .ion-text-lg-left {
+    text-align: left !important;
+  }
+
+  .ion-text-lg-right {
+    text-align: right !important;
+  }
+
+  .ion-text-lg-nowrap {
+    white-space: nowrap !important;
+  }
+
+  .ion-text-lg-wrap {
+    white-space: normal !important;
+  }
+}
+@media (min-width: 1200px) {
+  .ion-text-xl-center {
+    text-align: center !important;
+  }
+
+  .ion-text-xl-justify {
+    text-align: justify !important;
+  }
+
+  .ion-text-xl-start {
+    text-align: start !important;
+  }
+
+  .ion-text-xl-end {
+    text-align: end !important;
+  }
+
+  .ion-text-xl-left {
+    text-align: left !important;
+  }
+
+  .ion-text-xl-right {
+    text-align: right !important;
+  }
+
+  .ion-text-xl-nowrap {
+    white-space: nowrap !important;
+  }
+
+  .ion-text-xl-wrap {
+    white-space: normal !important;
+  }
+}
+.ion-text-uppercase {
+  /* stylelint-disable-next-line declaration-no-important */
+  text-transform: uppercase !important;
+}
+.ion-text-lowercase {
+  /* stylelint-disable-next-line declaration-no-important */
+  text-transform: lowercase !important;
+}
+.ion-text-capitalize {
+  /* stylelint-disable-next-line declaration-no-important */
+  text-transform: capitalize !important;
+}
+@media (min-width: 576px) {
+  .ion-text-sm-uppercase {
+    /* stylelint-disable-next-line declaration-no-important */
+    text-transform: uppercase !important;
+  }
+
+  .ion-text-sm-lowercase {
+    /* stylelint-disable-next-line declaration-no-important */
+    text-transform: lowercase !important;
+  }
+
+  .ion-text-sm-capitalize {
+    /* stylelint-disable-next-line declaration-no-important */
+    text-transform: capitalize !important;
+  }
+}
+@media (min-width: 768px) {
+  .ion-text-md-uppercase {
+    /* stylelint-disable-next-line declaration-no-important */
+    text-transform: uppercase !important;
+  }
+
+  .ion-text-md-lowercase {
+    /* stylelint-disable-next-line declaration-no-important */
+    text-transform: lowercase !important;
+  }
+
+  .ion-text-md-capitalize {
+    /* stylelint-disable-next-line declaration-no-important */
+    text-transform: capitalize !important;
+  }
+}
+@media (min-width: 992px) {
+  .ion-text-lg-uppercase {
+    /* stylelint-disable-next-line declaration-no-important */
+    text-transform: uppercase !important;
+  }
+
+  .ion-text-lg-lowercase {
+    /* stylelint-disable-next-line declaration-no-important */
+    text-transform: lowercase !important;
+  }
+
+  .ion-text-lg-capitalize {
+    /* stylelint-disable-next-line declaration-no-important */
+    text-transform: capitalize !important;
+  }
+}
+@media (min-width: 1200px) {
+  .ion-text-xl-uppercase {
+    /* stylelint-disable-next-line declaration-no-important */
+    text-transform: uppercase !important;
+  }
+
+  .ion-text-xl-lowercase {
+    /* stylelint-disable-next-line declaration-no-important */
+    text-transform: lowercase !important;
+  }
+
+  .ion-text-xl-capitalize {
+    /* stylelint-disable-next-line declaration-no-important */
+    text-transform: capitalize !important;
+  }
+}
+.ion-align-self-start {
+  align-self: flex-start !important;
+}
+.ion-align-self-end {
+  align-self: flex-end !important;
+}
+.ion-align-self-center {
+  align-self: center !important;
+}
+.ion-align-self-stretch {
+  align-self: stretch !important;
+}
+.ion-align-self-baseline {
+  align-self: baseline !important;
+}
+.ion-align-self-auto {
+  align-self: auto !important;
+}
+.ion-wrap {
+  flex-wrap: wrap !important;
+}
+.ion-nowrap {
+  flex-wrap: nowrap !important;
+}
+.ion-wrap-reverse {
+  flex-wrap: wrap-reverse !important;
+}
+.ion-justify-content-start {
+  justify-content: flex-start !important;
+}
+.ion-justify-content-center {
+  justify-content: center !important;
+}
+.ion-justify-content-end {
+  justify-content: flex-end !important;
+}
+.ion-justify-content-around {
+  justify-content: space-around !important;
+}
+.ion-justify-content-between {
+  justify-content: space-between !important;
+}
+.ion-justify-content-evenly {
+  justify-content: space-evenly !important;
+}
+.ion-align-items-start {
+  align-items: flex-start !important;
+}
+.ion-align-items-center {
+  align-items: center !important;
+}
+.ion-align-items-end {
+  align-items: flex-end !important;
+}
+.ion-align-items-stretch {
+  align-items: stretch !important;
+}
+.ion-align-items-baseline {
+  align-items: baseline !important;
+}
+/* #### Generated By: http://www.cufonfonts.com #### */
+@font-face {
+  font-family: "SF Pro Text Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SF Pro Text Regular"), url('sf_pro_display_regular.ttf') format("ttf");
+}
+:root {
+  --color-primary: #34A4B6;
+  --font-family: "SF Pro Text Regular";
+  --font-size: 13px;
+}
+.home-page {
+  display: block;
+}
+.home-page .home-check {
+  padding-right: 10px;
+  margin: 0px;
+}
+.home-page .home-check h1 {
+  float: left;
+  margin: 0px;
+}
+.home-page .home-page-test {
+  padding-left: 15px;
+  height: 65px;
+}
+.home-page .home-page-test .test-hi {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.38px;
+  color: #34A4B6;
+  margin: 0px;
+  padding-left: 9px;
+}
+.home-page .home-page-test .test-message {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+  color: #1A1A1A;
+  opacity: 0.5;
+  padding-left: 11px;
+  margin: 0px;
+  padding-top: 8px;
+}
+.home-page .home-text {
+  padding-left: 15px;
+  height: 65px;
+}
+.home-page .home-text .test-hi {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.38px;
+  color: #34A4B6;
+  margin: 0px;
+  padding-left: 9px;
+}
+.home-page .home-text .test-message {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+  color: #1A1A1A;
+  opacity: 0.5;
+  padding-left: 11px;
+  margin: 0px;
+  padding-top: 8px;
+}
+.home-page .home-text .number-rides {
+  padding-left: 11px;
+  font-family: Bebas Neue;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 72px;
+  letter-spacing: 0.41px;
+  color: #1A1A1A;
+  margin: 0px;
+}
+.home-page .home-text .number-rides .text-rides {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.41px;
+  color: #FFFFFF;
+  margin-top: -18px;
+  top: -6px;
+  position: relative;
+  margin-left: -64px;
+}
+.home-page .home-text .number-rides .text-hours {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.41px;
+  color: #FFFFFF;
+  margin-top: -18px;
+  top: -6px;
+  position: relative;
+  margin-left: -76px;
+}
+.home-page .home-text .number-rides .text-kms {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.41px;
+  color: #FFFFFF;
+  margin-top: -18px;
+  top: -6px;
+  position: relative;
+  margin-left: -65px;
+}
+.home-page .home-text-info {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.24px;
+  color: #1A1A1A;
+  margin: 0px;
+}
+.home-page .home-text-info .home-text-info-booking {
+  margin: 0px;
+  padding-left: 30px;
+  padding-top: 16px;
+}
+.home-page .home-history {
+  padding-left: 25px;
+  padding-top: 8px;
+  margin: 0px;
+  border-radius: 4px 0px 0px 4px;
+}
+.home-page .home-history .history-border {
+  width: 92%;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+.home-page .home-history .history-date-total {
+  border-left: 4px solid #1673FE;
+  border-radius: 5px;
+}
+.home-page .home-history .history-date-total .history-date {
+  padding-top: 7px;
+  margin: 0px;
+  padding-left: 9px;
+  width: 115%;
+}
+.home-page .home-history .history-date-total .history-time {
+  margin: 0px;
+  font-family: SF Pro Text;
+  opacity: 0.5;
+  padding-left: 9px;
+}
+.home-page .home-history .history-date-total .history-text {
+  font-family: SF Pro Text;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+  color: #1673FE;
+}
+.home-page .home-history .history-img {
+  max-width: 100%;
+  border: 0;
+  margin: 0px;
+  padding-top: 10px;
+  padding-right: 12px;
+}
+.home-page .home-img img {
+  max-width: 100%;
+  border: 0;
+  text-align: center;
+  padding: 34.67px 50px 0px;
+}
+.home-page .signup-btn {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0px 27px 0px;
+  padding-top: 8px;
+}
+.home-page .signup-btn .btn-login {
+  width: 100%;
+  height: 44px;
+  background: #34A4B6;
+  border-radius: 24px;
+}
+.home-page .signup-btn .btn-login p {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  color: white;
+}
+.home-page .home-img-info img {
+  max-width: 100%;
+  border: 0;
+  text-align: center;
+  padding: 26.67px 88px 0px;
+}
+.avatar-info {
+  text-align: center;
+}
+.avatar-info .camera {
+  margin-left: -18px;
+}
+.avatar-info .avatar_name {
+  padding-left: 15px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.test {
+  margin: 0px;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+  color: #1A1A1A;
+  padding-left: 16px;
+}
+.test-info {
+  margin: 0px;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+  color: #1A1A1A;
+  opacity: 0.7;
+  padding-left: 16px;
+  padding-top: 4px;
+  padding-right: 17px;
+}
+.signup-image {
+  width: 148px;
+  height: 90px;
+  opacity: 1;
+  border: 1px dashed #1A1A1A;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin: 10px 15px;
+}
+.signup-image .img-before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 33%;
+}
+.signup-image .img-after {
+  height: 90px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+.signup-btn {
+  width: 100%;
+  height: 44px;
+  padding: 0px 15px;
+}
+.signup-btn .btn-login {
+  height: 44px;
+  background: #34A4B6;
+  border-radius: 24px;
+  width: 100%;
+}
+.signup-btn .btn-login p {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  color: white;
+}
+input.native-input.sc-ion-input-ios {
+  padding-left: 6px;
+}
+.arrow-back-buttom {
+  float: right;
+  margin-top: -14px;
+  font-size: 26px;
+  padding-right: 21px;
+}
+.update-toolbar {
+  --background: #34A4B6;
+  color: #FFFFFF;
+}
+.avatar-image {
+  width: 88%;
+  height: 88%;
+  left: 144px;
+  top: 44px;
+  display: contents;
+}
+.avatar-name {
+  display: contents;
+}
+.avatar {
+  width: 88px;
+  height: 88px;
+  opacity: 1;
+  border: 1px dashed #1A1A1A;
+  box-sizing: border-box;
+  border-radius: 45px;
+}
+.booking-label {
+  padding-left: 16px;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+  color: #1A1A1A;
+}
+.booking-input {
+  padding-right: 15px;
+}
+.booking-text-info {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+  color: #1A1A1A;
+}
+.booking-text-info .text-info-booking {
+  margin: 0px;
+  padding-left: 30px;
+  padding-top: 16px;
+}
+.check-motorcycle {
+  padding: 0px 16px;
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-around;
+}
+.check-motorcycle .check-motorcycle-col {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  text-align: center;
+  padding: 0px;
+  margin: auto 8px;
+}
+.check-motorcycle .check-motorcycle-col .name-number {
+  margin: 0px;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.24px;
+  color: #34A4B6;
+}
+.booking-img {
+  padding-top: 16px;
+}
+.number-booking {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -0.41px;
+  color: #1A1A1A;
+  margin: 0px;
+}
+.number-money {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: -0.08px;
+  color: #1A1A1A;
+  opacity: 0.5;
+  margin: 0px;
+}
+.booking-datetime {
+  padding-left: 8px;
+}
+.booking-total-money {
+  float: right;
+  padding-right: 12px;
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.38px;
+  color: #F2221B;
+}
+.text-booking {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -0.41px;
+  color: #FFFFFF;
+}
+.booking-select {
+  padding-left: 8px;
+}
+.booking-success-p {
+  text-align: center;
+}
+.booking-success-p p {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.41px;
+}
+.booking-success-btn {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+.booking-success-btn .btn-login {
+  width: 100%;
+  height: 44px;
+  background: #34A4B6;
+  border-radius: 24px;
+}
+.booking-success-btn .btn-login p {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  color: white;
+}
+.booking-success-btn .booking-success-login {
+  width: 100%;
+  height: 44px;
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid #34A4B6;
+  box-sizing: border-box;
+  border-radius: 24px;
+}
+.booking-success-btn .booking-success-login p {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  color: white;
+}
+.booking-map {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+.booking-map .booking-map-img {
+  padding-top: 5px;
+}
+.booking-grid {
+  padding: 0px 16px;
+  padding-top: 16px;
+}
+.booking-test {
+  margin-left: -5px;
+}
+.scroll {
+  height: 100%;
+}
+#map {
+  width: 100%;
+  height: 100%;
+}
+.booking-map-grid {
+  position: relative;
+  padding: 0;
+}
+.booking-map-row {
+  padding: 0 16px;
+  position: absolute;
+  top: 8px;
+  width: 100%;
+  z-index: 100;
+}
+button.gm-control-active.gm-fullscreen-control {
+  margin-top: 69px !important;
+}
+.booking-map-btn {
+  width: 100%;
+  height: 44px;
+  padding: 0px 15px;
+  padding-top: 16px;
+  padding: 0 16px;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  bottom: 32px;
+}
+.booking-map-btn .booking-map-login {
+  height: 44px;
+  background: #34A4B6;
+  border-radius: 24px;
+  width: 100%;
+}
+.booking-map-btn .booking-map-login p {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  color: white;
+}
+.gmnoprint {
+  position: absolute;
+  display: none;
+}
+.icon-back {
+  font-size: 35px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.booking-status {
+  padding-left: 8px;
+  width: 100%;
+}
+.lits-datetime {
+  padding: 5px 20px;
+}
+.lits-datetime .booking-date {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+  color: #1A1A1A;
+}
+.booking-list-date {
+  margin: 0px;
+  padding: 10px 0px;
+}
+.booking-history-address {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.08px;
+  color: #1A1A1A;
+  margin: 0px;
+}
+.booking-history-messge {
+  font-family: SF Pro Text;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: right;
+  letter-spacing: -0.24px;
+  color: #1673FE;
+  margin: 0px;
+  position: absolute;
+  right: 0px;
+  bottom: -3px;
+}
+.label-list-history {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+.booking-history-onfirmation {
+  font-family: SF Pro Text;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: right;
+  letter-spacing: -0.24px;
+  color: #34A4B6;
+  margin: 0px;
+  position: absolute;
+  right: 0px;
+  bottom: -3px;
+}
+.booking-detail-message {
+  font-family: SF Pro Text;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.24px;
+  color: #34A4B6;
+  margin: 0px;
+}
+.boking-detail-btn {
+  padding: 0px 15px;
+}
+.boking-detail-btn .btn-bottom {
+  height: 44px;
+  border-radius: 24px;
+  width: 100%;
+  border: 1px solid #34A4B6;
+}
+.boking-detail-btn .test-bottom {
+  color: #34A4B6;
+}
+.boking-detail-btn .btn-bottom-reset {
+  height: 44px;
+  border-radius: 24px;
+  width: 100%;
+  background: #34A4B6;
+}
+.boking-detail-btn .test-bottom-reset {
+  color: #fff;
+}
+.boking-detail-call-btn {
+  padding: 0px 15px;
+}
+.boking-detail-call-btn .btn-call {
+  height: 44px;
+  border-radius: 24px;
+  width: 100%;
+  border: 1px solid #1A1A1A;
+}
+.boking-detail-call-btn .test-bottom {
+  color: #1A1A1A;
+}
+.booking-code {
+  text-align: center;
+}
+.content-evaluate {
+  width: 95%;
+  top: calc(50% - 231.5px);
+  left: 8px;
+  height: 481px;
+  position: absolute;
+  z-index: 1001;
+  margin: 0px auto;
+  border-radius: 18px;
+}
+.img-evaluate {
+  text-align: center;
+}
+.evaluate {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -0.41px;
+  margin: 0px;
+  padding-top: 11px;
+}
+.text-evaluate {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.24px;
+  margin: 0px;
+  padding-top: 6px;
+}
+.star {
+  text-align: center;
+}
+.icon-star {
+  padding-right: 8px;
+}
+ion-backdrop {
+  opacity: 0.3;
+}
+body {
+  font-family: "SF Pro Text Regular";
+  font-style: normal;
+}
+
+.login-bg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #34A4B6;
+}
+
+.login-bg .login-logo {
+  position: absolute;
+  width: 220px;
+  height: 88px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 132px;
+}
+
+.login-bg .sigIn {
+  position: unset;
+}
+
+.login-bg .sigIn .sigIn-sigIn-img {
+  position: absolute;
+  width: 125px;
+  height: 50px;
+  left: calc(50% - 62.5px);
+  top: 56px;
+}
+
+.login-bg .sigIn .sigIn-login {
+  position: absolute;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: SF Pro Display;
+  font-weight: bold;
+  letter-spacing: 0.35px;
+  top: 100px;
+  left: calc(50% - 62.5px);
+  color: #FFFFFF;
+}
+
+.login-bg .login-form {
+  position: absolute;
+  width: 326px;
+  height: 104px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 260px;
+}
+
+.login-bg .login-form .login-btn {
+  position: absolute;
+  width: 326px;
+  height: 44px;
+  left: 0;
+  top: 0;
+}
+
+.login-bg .login-form .login-btn .btn-login {
+  position: absolute;
+  width: 326px;
+  height: 44px;
+  left: 0;
+  top: 0;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 24px;
+}
+
+.login-bg .login-form .login-btn .btn-login p {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  color: white;
+}
+
+.login-bg .login-form .register-btn {
+  position: absolute;
+  width: 326px;
+  height: 44px;
+  left: 0;
+  bottom: 0;
+}
+
+.login-bg .login-form .register-btn .btn-register {
+  position: absolute;
+  width: 326px;
+  height: 44px;
+  left: 0;
+  bottom: 0;
+  background: #FFFFFF;
+  border-radius: 24px;
+}
+
+.login-bg .login-form .register-btn .btn-register p {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  color: #34A4B6;
+}
+
+.login-bg .login-footer {
+  position: absolute;
+  width: 90%;
+  height: 20px;
+  left: 24px;
+  bottom: 24px;
+}
+
+.login-bg .login-footer .login-version {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  left: 0;
+  top: 0;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+  color: #FFFFFF;
+  margin: 0px;
+}
+
+.login-bg .signup-logo {
+  position: absolute;
+  width: 125px;
+  height: 50px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 36px;
+}
+
+.login-bg .signup-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 90px;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.login-bg .signup-title ion-col {
+  text-align: center;
+}
+
+.login-bg .signup-form {
+  position: absolute;
+  width: 100%;
+  height: 75vh;
+  left: 0px;
+  bottom: 0;
+  background: #FFFFFF;
+  border-radius: 32px 32px 0px 0px;
+}
+
+.login-bg .signup-form .signup-item {
+  width: 90%;
+  --highlight-color-focused: none;
+  opacity: 0.7;
+}
+
+.login-bg .signup-form .signup-item .pr-10 {
+  padding-right: 10px;
+}
+
+.login-bg .signup-form .signup-item.no-border {
+  --inner-border-width: 0;
+  display: inline;
+}
+
+.login-bg .signup-form .signup-item.no-border ion-item {
+  --inner-border-width: 0;
+}
+
+.login-bg .signup-form .signup-item-error {
+  width: 90%;
+  --highlight-color-focused: none;
+  opacity: 1;
+  --border-color: red;
+}
+
+.login-bg .signup-form .signup-item-error .pr-10 {
+  padding-right: 10px;
+}
+
+.login-bg .signup-form .signup-item-error .input-error {
+  --placeholder-color: red;
+}
+
+.login-bg .signup-form .error-text {
+  padding: 0px 20px;
+  color: red;
+  font-style: italic;
+}
+
+.login-bg .signup-form .signup-image {
+  width: 148px;
+  height: 90px;
+  opacity: 1;
+  border: 1px dashed #1A1A1A;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin: 10px 15px;
+}
+
+.login-bg .signup-form .signup-image .img-before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 33%;
+}
+
+.login-bg .signup-form .signup-image .img-after {
+  height: 90px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+.login-bg .signup-form .signup-text-contain {
+  margin: 0 auto;
+}
+
+.login-bg .signup-form .signup-text-contain ion-col {
+  text-align: center;
+}
+
+.login-bg .signup-form .signup-text-contain .signup-text {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.login-bg .signup-btn {
+  width: 100%;
+  height: 44px;
+  margin: 0 auto;
+}
+
+.login-bg .signup-btn .btn-login {
+  /* Pri */
+  background: #34A4B6;
+  border-radius: 24px;
+}
+
+.login-bg .signup-btn .btn-login p {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  color: white;
+}
+
+.otp-container .input {
+  top: 9px;
+  opacity: 0.7;
+  width: 93%;
+  right: -5px;
+}
+
+.otp-container .otp-header ion-icon {
+  font-size: 35px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.otp-container .otp-content {
+  margin: 0px;
+}
+
+.otp-container .otp-content .forgot-password-message {
+  margin: 0px;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.24px;
+  color: #000000;
+  opacity: 0.5;
+}
+
+.otp-container .otp-content h1 {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.35px;
+  color: #34A4B6;
+}
+
+.otp-container .otp-content ion-col {
+  text-align: center;
+}
+
+.otp-container .otp-content .otp-continue {
+  width: 100%;
+  height: 44px;
+  background: #34A4B6;
+  border-radius: 24px;
+  --color: white;
+  margin: 0xp;
+}
+
+.otp-container .otp-content .otp-resend {
+  margin: 0px;
+  width: 100%;
+  height: 44px;
+  /* Pri */
+  border: 1px solid #34A4B6;
+  box-sizing: border-box;
+  border-radius: 24px;
+  --color: #34A4B6;
+}
+
+.signin-bg {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 220px;
+  background: #FFFFFF;
+  border-radius: 32px 32px 0px 0px;
+  height: calc(100% - 219px);
+}
+
+.signin-bg .signin-card {
+  margin-top: 25px;
+  box-shadow: none;
+  padding: 0 12px;
+  width: 100%;
+}
+
+.signin-bg .input {
+  width: 100%;
+  height: 55px;
+  opacity: 0.7;
+}
+
+.signin-bg .register-btn .signin-button {
+  width: 100%;
+  height: 44px;
+  left: 24px;
+  top: 319px;
+  background: #34A4B6;
+  border-radius: 24px;
+  color: #FFFFFF;
+}
+
+.signin-bg .signin-register {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  left: calc(100% - 115px);
+}
+
+.signin-bg .signin-row-img {
+  height: 255px;
+}
+
+.signin-bg .signin-img {
+  position: absolute;
+  width: 100%;
+  left: calc(50% - 116px);
+  bottom: 45px;
+}
+
+.signin-bg .signin-create-signup {
+  position: absolute;
+  width: 100%;
+  left: calc(50% - 116px);
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+  bottom: 0;
+}
+
+.forgot-password-btn {
+  background: #34A4B6;
+  border-radius: 24px;
+  position: absolute;
+  width: 92%;
+  height: 44px;
+  right: 12px;
+  top: 295px;
+  left: 12px;
+}
+
+.forgot-password-btn .forgot-password-button {
+  width: 100%;
+  text-align: center;
+}
+
+.forgot-password-btn .forgot-password-button .forgot-password-p {
+  color: #fff;
+  margin: 0px;
+  padding-bottom: 8px;
+}
+
+@media only screen and (max-height: 600px) {
+  .signin-bg {
+    height: calc(100% - 124px);
+  }
+}
+
+ion-header,
+ion-toolbar {
+  --background: #34A4B6;
+  color: white;
+}
+
+ion-toolbar {
+  --border-style: none;
+}
+
+.cus-detail-header .cus-info-back {
+  font-size: 24px;
+}
+
+.cus-detail-header .cus-info-save {
+  font-size: 17px;
+}
+
+.label-setting {
+  opacity: 0.5;
+  font-style: 15px;
+}
+
+.btn-setting-save {
+  width: 90%;
+  --background: #34A4B6;
+  --border-radius: 24px;
+}
+
+ion-select::part(icon) {
+  display: none !important;
+}
+
+.login-vn {
+  float: right;
+  margin: 0px;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.login-eng {
+  margin: 0px;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.login-line {
+  padding-top: 5px;
+  margin: 0px;
+}
+
+.login-translate {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 0px;
+  letter-spacing: -0.24px;
+  color: #FFFFFF;
+  padding-left: 100px;
+  height: 100%;
+}
+
+.login-vn-col {
+  margin: 0px;
+  bottom: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.margin {
+  margin: 16px;
+}
+
+.forgot-password {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.35px;
+  color: #1A1A1A;
+  margin: 0px;
+}
+
+ion-radio.md.in-item.interactive.radio-checked.hydrated {
+  margin: 4px;
+}
+
+ion-radio.md.in-item.interactive.hydrated {
+  margin: 4px;
+}
+
+.check-gende {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+  color: #1A1A1A;
+  opacity: 0.3;
+}
+
+.login-signin {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.35px;
+  color: #FFFFFF;
+}
+
+.search-gg {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: #fff;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.grey {
+  color: grey;
+}
+
+ionic5-star-rating button:focus, ionic5-star-rating ion-icon:focus {
+  outline: none !important;
+}
+
+/*# sourceMappingURL=styles.css.map*/

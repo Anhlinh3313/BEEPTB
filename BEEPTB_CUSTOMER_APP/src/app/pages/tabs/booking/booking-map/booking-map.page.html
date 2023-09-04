@@ -1,0 +1,41 @@
+<ion-content>
+  <ion-row class="otp-header">
+    <ion-toolbar class="update-toolbar">
+      <ion-icon class="icon-back" name="arrow-back" slot="start" (click)="closeUpdateInfo()"></ion-icon>
+      <p class="text-booking">{{'booking.booking' | translate}}</p>
+    </ion-toolbar>
+  </ion-row>
+
+  <ion-grid class="booking-map-grid">
+    <ion-row class="booking-map-row">
+      <ion-col>
+        <ion-row class="booking-map">
+          <ion-col size="1">
+            <ion-img class="booking-map-img" src="../../../assets/icon/ion-map.svg"></ion-img>
+          </ion-col>
+          <ion-col size="11"class="booking-test" >
+            <input class="search-gg" #address id="address" ngx-google-places-autocomplete [options]='options' [(ngModel)]="inputAddress" #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event, address)" placeholder="{{'booking.enterAnAddress' | translate}}"/>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col style="padding: 0px;">
+        <agm-map
+        [style.height.px]="height"
+        [latitude]="lat"
+        [longitude]="lng">
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="booking-map-btn" style="padding-top: 16px;">
+      <ion-button fill="clear" class="booking-map-login" (click)="bookingMap()">
+          <p>{{'booking.next' | translate}}</p>
+        </ion-button>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

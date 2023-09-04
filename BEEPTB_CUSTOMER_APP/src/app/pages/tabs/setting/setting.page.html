@@ -1,0 +1,50 @@
+<ion-header class="cus-detail-header">
+    <ion-toolbar>
+      <ion-icon class="cus-info-back ion-margin-start" name="arrow-back" slot="start" (click)="back()"></ion-icon>
+      <ion-title style="text-align: center;">{{'setting.setting' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-row style="margin-top: 16px;">
+        <ion-col>
+            <ion-label style="margin-left: 16px;" class="label-setting" position="stacked">{{'setting.password' | translate}}</ion-label>
+            <ion-item class="ion-margin-bottom" detail (click)="goToChangePass()" lines="full">
+                <img slot="start" src="../../../../assets/icon/password.svg">
+                <ion-label>
+                  {{'setting.changePassword' | translate}}
+                </ion-label>
+            </ion-item>
+            
+            <ion-label  style="margin-left: 16px" class="label-setting" position="stacked">{{'setting.language' | translate}}</ion-label>
+            <ion-item class="ion-margin-bottom" detail detail-icon='chevron-down' lines="full">
+                <img slot="start" src="../../../../assets/icon/language.svg">
+                <ion-select [(ngModel)]="language" (ionChange)="changeLanguage()" [interfaceOptions]="customAlertOptions" interface="alert" cancelText="Đóng" okText="Chọn">
+                  <ion-select-option value="vi">Tiếng Việt</ion-select-option>
+                  <ion-select-option value="en">English</ion-select-option>
+                </ion-select>
+            </ion-item>
+            
+            <ion-label  style="margin-left: 16px" class="label-setting" position="stacked">{{'setting.customerCareCenter' | translate}}</ion-label>
+            <ion-item class="ion-margin-bottom" lines="full">
+                <img slot="start" src="../../../../assets/icon/telephone.svg">
+                <ion-label>
+                  18001900
+                </ion-label>
+            </ion-item>
+            <ion-item class="ion-margin-bottom" lines="full">
+                <img slot="start" src="../../../../assets/icon/email.svg">
+                <ion-label>
+                  info@beep.vn
+                </ion-label>
+            </ion-item>
+            <ion-item class="ion-margin-bottom" lines="full">
+                <img slot="start" src="../../../../assets/icon/facebook.svg">
+                <ion-label>
+                  facebook.com/beepvn
+                </ion-label>
+            </ion-item>
+        </ion-col>
+    </ion-row>
+</ion-content>
+  
+  

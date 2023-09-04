@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-text style="margin-right: 16px;" slot="end" (click)="dismissModal()">
+      <p>Đóng</p>
+    </ion-text>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ngx-image-viewer [src]="dataImage" [config]="configImageViewer"></ngx-image-viewer>
+</ion-content>
